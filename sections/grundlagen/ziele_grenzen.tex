@@ -7,9 +7,9 @@ Unterschiede zwischen bestehenden und erforderlichen
 Bedingungen (d.h. Defekte/Fehler/Bugs) zu erkennen
 und die Eigenschaften des Softwareobjekts zu bewerten (vgl. \cite{singh2012software}, S.07).
 Das Softwaretesten ist daher eine Methode, um zu überprüfen,
-ob das tatsächliche Softwareprodukt die erwarteten
-Anforderungen entspricht, und um sicherzustellen, dass
-das Softwareprodukt frei von Fehlern ist.
+ob das Softwareprodukt den erwarteten
+Anforderungen entspricht und um sicherzustellen, dass
+es frei von Fehlern ist.
 
 Im 21. Jahrhundert ist der Einsatz von Software und
 Anwendungen weit verbreitet und kein Bereich bleibt
@@ -19,10 +19,11 @@ Statista (vgl. \cite{Statista2021}) bis 2020 rasant auf 64,2
 Zettabyte \begin{math}(2^{70})\end{math} angestiegen. Die Nutzer vertrauen ihre sensiblen und privaten Daten
 Plattformen an, deren Aufgabe ist es, sie zu schützen. Testen
 ist wichtig, weil Softwarefehler teuer oder sogar gefährlich
-sein können. Softwarefehler können potenziell finanzielle
+sein können. Sie können finanzielle
 und menschliche Verluste verursachen, und die Geschichte
 ist voll von solchen Beispielen:
 
+\noindent
 \begin{enumerate}
     \item Im Mai 1996 führte ein Softwarefehler dazu, dass
      den Konten von 823 Kunden einer großen US-Bank 920
@@ -35,50 +36,45 @@ Das Testen einer Anwendung hat viele Vorteile. Zu den wichtigsten
 gehören die folgenden:
 
 
- \textbf{Kosteneffektivität}: Dies ist einer der
-wichtigsten Vorteile von Softwaretestens. Das
-rechtzeitige Testen eines IT-Projekts hilft, auf
+ \textbf{Kosteneffektivität}: Das
+rechtzeitige Testen eines IT-Projekts hilft auf
 lange Sicht Geld zu sparen. Wenn die Fehler bereits in
 der frühen Phase des Softwaretests entdeckt werden,
 kostet es weniger, sie zu beheben. Es ist besser, mit
 dem Testen früher zu beginnen und es in jeder Phase des
 Lebenszyklus der Softwareentwicklung einzuführen.
-Regelmäßige Tests sind erforderlich (vgl. \cite{kumar2010software}, S.53),
+Regelmäßige Tests sind erforderlich (vgl. \cite{kumar2010software}, S.53), um
 sicherzustellen, dass die Anwendung gemäß den Anforderungen entwickelt wird.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{images/Cost-of-fixing-bugs-in-different-phases}
+    \includegraphics[scale=0.3]{images/Cost-of-fixing-bugs-in-different-phases}
     \caption{Kosten für die Behebung von Fehlern (Bugs) in verschiedenen Phasen (vgl. \cite{kumar2010software})} \label{fig:mof}
 \end{figure}
 
 
-\textbf{Sicherheit}: Dies ist der anfälligste und
-sensibelste Vorteil von Softwaretests. Die Nutzer suchen
-nach vertrauenswürdigen Produkten. Das Testen hilft
-dabei, Risiken und Probleme früher zu beseitigen
-(vgl. \cite{shultz2011software}, S.09).
+\textbf{Erhöhung der Sicherheit}: Sicherheit ist der anfälligste und
+sensibelste Teil des Softwaretestens. Durch Testen wird sichergestellt,
+dass die Anwendung über einen minimalen Schutz verfügt. Testen hilft
+dabei, Risiken und Probleme früher zu beseitigen. So wird die Anwendung für Nutzer attraktiv,
+die vertrauenswürdige Produkte suchen (vgl. \cite{shultz2011software}, S.09).
 
 \textbf{Produktqualität}: Sie ist eine wesentliche
-Voraussetzung für jedes Softwareprodukt. Durch das
-Testen wird sichergestellt, dass den Kunden ein
-Qualitätsprodukt geliefert wird
-(vgl. \cite{shultz2011software}, S.09).
+Voraussetzung für jedes Softwareprodukt. Zu den sechs Gruppen von Software-Qualitätsindikatoren
+in der ISO-Norm 9126 (vgl. \cite{AlainAbran2010}) gehört die Wartbarkeit, zu der auch die Untergruppe Testbarkeit gehört.
+Durch Testen kann die Qualität einer Anwendung sowie ihre Wartbarkeit erhöht werden und so wird dem Kunden sichergestellt,
+dass ein Qualitätsprodukt geliefert wird.
 
 
 Aus diesen Gründen ist das Testen von Software ein
-integraler Bestandteil des Softwareentwicklungsprozesses.
-Es ist jedoch ebenso wichtig zu verstehen, dass Testen nur
-dazu dient, das Vorhandensein von potentiellen Fehlern
-aufzudecken. Aber das Testen kann nicht sicherstellen, dass
+integraler Bestandteil des Softwareentwicklungsprozesses, jedoch hat es Grenzen.
+Testen dient nur dazu, das Vorhandensein von potentiellen Fehlern
+aufzudecken. Aber es kann nicht sicherstellen, dass
 die Software keine Fehler oder Bugs enthält (vgl. \cite{kumar2010software}, S.55).
 Dazu können Tests nicht nachweisen, dass ein Produkt unter allen
 Bedingungen richtig funktioniert, sondern nur, dass es unter
 bestimmten Bedingungen nicht richtig funktioniert (vgl. \cite{kumar2010software}, S.56).
-Das Testen hilft auch nicht bei der Suche nach den Ursachen,
-die überhaupt erst zur Entstehung von Fehlern geführt haben.
-Das Auffinden der Ursachen von Fehlern kann dabei helfen,
-das Auftreten solcher Fehler in Zukunft zu verhindern (vgl. \cite{kumar2010software}, S.56).
+
 
 
 Da das Ziel dieser Arbeit darin besteht, eine \Gls{TestSuite} für

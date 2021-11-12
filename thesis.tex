@@ -24,7 +24,9 @@
 }
 
 \parskip=10pt
-\renewcommand{\baselinestretch}{1.8}
+\usepackage{float}
+%\renewcommand{\baselinestretch}{1.8}
+\usepackage{setspace}
 
 \usepackage[hidelinks]{hyperref} % makes all links clickable but hides ugly boxes
 \usepackage[capitalise,nameinlink,noabbrev]{cleveref} % automatically inserts Fig. X in the text with \cref{..}
@@ -89,7 +91,7 @@
 \input{lst.tex}
 
 \begin{document}
-
+\doublespacing
 \faculty{Fakultät Informatik}
 \department{}
 \institute{Institut für Software- und Multimediatechnik}
