@@ -1,0 +1,1 @@
+biber --input-directory=D:/uni/bachelor/software_testing/Bachelorarbeit thesis

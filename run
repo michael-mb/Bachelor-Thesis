@@ -1,0 +1,4 @@
+#!/bin/sh
+
+biber D:/uni/bachelor/software_testing/Bachelorarbeit thesis
+latexmk -pdf thesis.tex

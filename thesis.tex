@@ -1,0 +1,137 @@
+% the following command is only required if the thesis is written in german
+\RequirePackage[ngerman=ngerman-x-latest]{hyphsubst}
+
+% change to english for english theses
+\documentclass[ngerman,BCOR=1.5cm,twoside]{tudscrreprt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{isodate}
+
+\usepackage[
+    style=numeric-comp,
+    backend=biber,
+    url=false,
+    doi=false,
+    isbn=false,
+    hyperref,
+]{biblatex}
+\addbibresource{bibliography.bib}
+\AtEveryBibitem{%
+    \clearfield{note}%
+}
+
+\parskip=10pt
+
+\usepackage[hidelinks]{hyperref} % makes all links clickable but hides ugly boxes
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref} % automatically inserts Fig. X in the text with \cref{..}
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% if you need mathy stuff
+\newtheorem{lem}{Lemma}
+\crefname{lem}{Lemma}{Lemmas}
+\newtheorem{thm}{Theorem}
+\crefname{thm}{Theorem}{Theorems}
+\newtheorem{defs}{Definition}
+\crefname{defs}{Def.}{Defs.}
+
+\usepackage{blindtext}
+
+%\usepackage{tudscrsupervisor} % if you want to copy the sources of the task description into the thesis
+
+\usepackage{csquotes}
+
+
+
+\usepackage{caption}
+\captionsetup{font=sf,labelfont=bf,labelsep=space}
+\usepackage{floatrow}
+\floatsetup{font=sf}
+\floatsetup[table]{style=plaintop}
+\captionsetup{singlelinecheck=off,format=hang,justification=raggedright}
+\DeclareCaptionSubType[alph]{figure}
+\DeclareCaptionSubType[alph]{table}
+\captionsetup[subfloat]{labelformat=brace,list=off}
+
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{tabu}
+\usepackage{longtable}
+
+\usepackage{quoting}
+
+\usepackage[babel]{microtype}
+
+\usepackage{xfrac}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep}
+
+\usepackage{ellipsis}
+\let\ellipsispunctuation\relax
+
+\usepackage{acronym}
+\usepackage[toc]{glossaries}
+
+\loadglsentries{sections/glossaries}
+
+\makeglossaries
+
+\input{lst.tex}
+
+\begin{document}
+
+\faculty{Fakultät Informatik}
+\department{}
+\institute{Institut für Software- und Multimediatechnik}
+\chair{Lehrstuhl für Softwaretechnologie}
+\title{%
+    Entwicklung einer Web-Testsuite am Beispiel von jExam
+}
+
+% for a master thesis
+\thesis{Bachelor}
+\graduation[B.Sc.]{Bachelor of Science}
+
+\author{Michael Vivian Mboni Saha}
+\emailaddress[]{michael_vivian.mboni_saha@tu-dresden.de}
+\matriculationnumber{4757191}
+\matriculationyear{2018}
+\discipline{Bachelor Informatik}
+\supervisor{%
+    M.Sc. Ronny Marx
+}
+\professor{Prof. Dr. rer. nat habil. Uwe Aßmann}
+\date{12.12.2099}
+\maketitle
+\newpage
+
+\tableofcontents
+\listoffigures
+\listoftables
+\input{sections/abkuerzungen.tex}
+\printglossary[title=Glossar]
+
+\input{sections/einleitung/einleitung.tex}
+\input{sections/grundlagen/grundlagen.tex}
+\input{sections/problem.tex}
+\input{sections/implementierung.tex}
+\input{sections/eval.tex}
+\input{sections/zusammenfassung.tex}
+
+\printbibliography[heading=bibintoc]\label{sec:bibliography}%
+
+\appendix
+\input{sections/appendix}
+
+
+\confirmation
+
+\end{document}

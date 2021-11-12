@@ -1,0 +1,42 @@
+\section{Webanwendungen}
+
+Das weite Feld der Softwareentwicklung umfasst auch die
+Entwicklung von Webanwendungen. Lange Zeit wurden
+Anwendungen als kompakte, installierbare Programme
+verkauft. Dabei handelt es sich um die so genannten
+klassischen Anwendungen oder Computeranwendungen, die
+lokal auf einem Computer, Mobiltelefon oder Tablet
+installiert werden müssen. Im Gegensatz zu herkömmlichen
+Anwendungen werden Webanwendungen nicht lokal auf dem Gerät
+des Nutzers installiert, sondern auf einem Server, so dass
+sie über eine bestimmte \acs{url} zugänglich sind.
+
+Nach Kappel et al. ist eine Webanwendung ein Softwaresystem,
+das auf den Spezifikationen des World Wide Web Consortiums
+(\acs{w3c}) basiert und Webressourcen bereitstellt, die über
+eine Benutzeroberfläche wie einen Webbrowser genutzt werden
+können (vgl. \cite{kappel1}, S.02).
+
+Für den Betrieb einer Webanwendung werden mehrere
+Computersystemkomponenten benötigt.Erstens das \gls{frontend},
+das die grafische Oberfläche bezeichnet, mit der der
+Benutzer interagiert, gefolgt vom \gls{backend}, das die
+Logik der Anwendung enthält (z.B Datenbanken, Cloud).
+
+
+Der Benutzer greift auf die Webanwendung über einen Computer
+zu, der als Client bezeichnet wird. Der Client sendet eine
+oder mehrere Anfragen über das Internet oder Intranet via
+\acs{http} oder \acs{https}  an einen anderen Computer (Server),
+auf dem die Webanwendung läuft. Der Server nimmt dann die
+HTTP-Anfragen entgegen und verarbeitet sie. Je nach Anfrage
+werden die angeforderten Daten entweder aus der Datenbank
+abgerufen oder gespeichert. Die verarbeiteten Daten werden
+dann vom Server in einer entsprechenden Antwort
+(HTTP-Response) an den Client zurückgesendet und im
+Webbrowser angezeigt. So funktionieren Webanwendungen grundsätzlich.
+
+Um Webanwendungen zu testen, ist es wichtig, eine Testumgebung zu schaffen.
+Diese Testumgebung ermöglicht es dem Tester, alle möglichen Schwachstellen in einer Webanwendung zu untersuchen,
+ohne die Anwendung zu gefährden, wenn sie bereits in Produktion ist.
+
