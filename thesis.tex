@@ -24,7 +24,6 @@
 }
 
 \parskip=10pt
-\usepackage{float}
 %\renewcommand{\baselinestretch}{1.8}
 \usepackage{setspace}
 
@@ -50,13 +49,11 @@
 
 \usepackage{csquotes}
 
-
-
 \usepackage{caption}
 \captionsetup{font=sf,labelfont=bf,labelsep=space}
 \usepackage{floatrow}
-\floatsetup{font=sf}
-\floatsetup[table]{style=plaintop}
+\usepackage{float}
+\floatsetup[table]{font=sf,style=plaintop}
 \captionsetup{singlelinecheck=off,format=hang,justification=raggedright}
 \DeclareCaptionSubType[alph]{figure}
 \DeclareCaptionSubType[alph]{table}
@@ -91,51 +88,51 @@
 \input{lst.tex}
 
 \begin{document}
-\doublespacing
-\faculty{Fakultät Informatik}
-\department{}
-\institute{Institut für Software- und Multimediatechnik}
-\chair{Lehrstuhl für Softwaretechnologie}
-\title{%
-    Entwicklung einer Web-Testsuite am Beispiel von jExam
-}
+    \doublespacing
+    \faculty{Fakultät Informatik}
+    \department{}
+    \institute{Institut für Software- und Multimediatechnik}
+    \chair{Lehrstuhl für Softwaretechnologie}
+    \title{%
+        Entwicklung einer Web-Testsuite am Beispiel von jExam
+    }
 
 % for a master thesis
-\thesis{Bachelor}
-\graduation[B.Sc.]{Bachelor of Science}
+    \thesis{Bachelor}
+    \graduation[B.Sc.]{Bachelor of Science}
 
-\author{Michael Vivian Mboni Saha}
-\emailaddress[]{michael_vivian.mboni_saha@tu-dresden.de}
-\matriculationnumber{4757191}
-\matriculationyear{2018}
-\discipline{Bachelor Informatik}
-\supervisor{%
-    M.Sc. Ronny Marx
-}
-\professor{Prof. Dr. rer. nat habil. Uwe Aßmann}
-\date{12.12.2099}
-\maketitle
-\newpage
+    \author{Michael Vivian Mboni Saha}
+    \emailaddress[]{michael_vivian.mboni_saha@tu-dresden.de}
+    \matriculationnumber{4757191}
+    \matriculationyear{2018}
+    \discipline{Bachelor Informatik}
+    \supervisor{%
+        M.Sc. Ronny Marx
+    }
+    \professor{Prof. Dr. rer. nat habil. Uwe Aßmann}
+    \date{12.12.2099}
+    \maketitle
+    \newpage
 
-\tableofcontents
-\listoffigures
-\listoftables
-\input{sections/abkuerzungen.tex}
-\printglossary[title=Glossar]
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    \input{sections/abkuerzungen.tex}
+    \printglossary[title=Glossar]
 
-\input{sections/einleitung/einleitung.tex}
-\input{sections/grundlagen/grundlagen.tex}
-\input{sections/problem.tex}
-\input{sections/implementierung.tex}
-\input{sections/eval.tex}
-\input{sections/zusammenfassung.tex}
+    \input{sections/einleitung/einleitung.tex}
+    \input{sections/grundlagen/grundlagen.tex}
+    \input{sections/problem.tex}
+    \input{sections/implementierung.tex}
+    \input{sections/eval.tex}
+    \input{sections/zusammenfassung.tex}
 
-\printbibliography[heading=bibintoc]\label{sec:bibliography}%
+    \printbibliography[heading=bibintoc]\label{sec:bibliography}%
 
-\appendix
-\input{sections/appendix}
+    \appendix
+    \input{sections/appendix}
 
 
-\confirmation
+    \confirmation
 
 \end{document}
