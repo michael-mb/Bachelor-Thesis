@@ -1,1 +1,63 @@
 \section{Testumgebung}
+
+Im Moment ist die alte Version von jexam (\Gls{jexam_2009})
+in \Gls{prod}, weil sie stabil und funktional ist.
+Die Entwickler des Teams sorgen dafür, dass die
+Funktionen der Anwendung ordnungsgemäß funktionieren.
+Dies ist bereits eine Art manueller Test. Die neue
+Version, die derzeit entwickelt wird, wurde noch nicht
+vollständig getestet. Daher ist sie von unbekannter
+Qualität und kann nicht als stabil für die \Gls{prod}
+gelten. Sie sollte nicht in die \Gls{prod} aufgenommen
+werden, damit die Benutzer sie testen können.  Wenn
+die Entwickler dies täten, würden sie Schwachstellen
+aufdecken, die von böswilligen Personen genutzt werden
+könnten, um die Sicherheit der Nutzerdaten zu
+gefährden. Bevor eine Anwendung in \Gls{prod} geht,
+sollte sie getestet werden. Da dies nicht in der
+\Gls{prod} geschehen sollte, ist es notwendig, eine
+Umgebung zu schaffen, in der die Anwendung getestet
+werden kann.
+
+
+Nach Everett eine Testumgebung ist eine Umgebung,
+die Hardware, Instrumente, Simulatoren, Software-Tools
+und andere unterstützende Elemente enthält, die für
+die Durchführung eines Tests erforderlich sind,
+d.h. sie ermöglicht es, die Anwendung zu testen, ohne
+den Kunden zu beeinträchtigen (vgl. \cite{shultz2011software}, S. 150-152).
+Die Einrichtung einer Testumgebung hat eine Reihe von Vorteilen :
+
+\noindent
+\begin{enumerate}
+    \item Die Nutzer nicht mit einer Anwendung von
+    zweifelhafter Qualität zu belästigen. Ein
+    Qualitätsabfall ist oft sehr nachteilig für eine
+    Anwendung. Die Nutzer könnten sich beschweren,
+    dass die alte Version besser ist und die ganze
+    Arbeit der Entwickler, die die neue Version
+    entwickelt haben, preisgeben.
+
+    \item Die Einbeziehung aller Szenarien in die
+    Tests, was die Zuverlässigkeit der Software
+    erhöht. Sie hilft auch dabei, fehlende
+    Implementierungen der Software zu finden. In der
+    Produktion wäre dies eine komplizierte Aufgabe, da
+    sich die Daten und die Anwendung ständig ändern.
+
+    \item Die Senkung der Produktionskosten durch
+    frühzeitige Erkennung von Fehlern.
+
+\end{enumerate}
+
+Testumgebungen sind für jede Softwareentwicklung
+notwendig. Sie ermöglichen es, das Produkt zu testen,
+bevor es auf den Markt kommt, ohne ein Risiko für die
+Produktion einzugehen. Wenn sie jedoch wirklich
+wirksam sein sollen, dürfen sie die Entwicklung nicht
+behindern, sondern müssen auch zuverlässig sein. Aus
+diesem Grund muss diesen Umgebungen besondere
+Aufmerksamkeit geschenkt werden. Die endgültige
+Qualität des Produkts hängt stark von der Qualität der
+Testumgebung ab (vgl. \cite{shultz2011software}, S. 152).
+
