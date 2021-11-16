@@ -1,1 +1,98 @@
-\subsection{Nicht funktionale Tests}
+\subsection{Nichtfunktionale Tests}
+
+Nichtfunktionales Testen ist das Testen einer Softwareanwendung oder
+eines Systems auf seine nichtfunktionalen Anforderungen. Es dient dazu,
+die Bereitschaft eines Systems in Bezug auf nichtfunktionale Parameter zu
+testen, die bei funktionalen Tests nicht berücksichtigt werden.
+Nichtfunktionale Tests beziehen sich auf verschiedene Aspekte der Software
+wie Leistung, Belastung, Stress, Skalierbarkeit, Sicherheit, Kompatibilität.
+Der Schwerpunkt liegt auf der Verbesserung der Benutzererfahrung.
+
+
+Es gibt über 100 Arten von Nichtfunktionalen Tests, von denen einige in den
+folgenden Abschnitten behandelt werden:
+
+\textbf{Performancetests}
+
+Nach Vokolos et al. sind Performancetests die Gesamtheit aller Aktivitäten,
+die an der Bewertung der Leistung einer Software in \Gls{prod}
+beteiligt sind (\cite{vokolos1998performance}, S. 80).
+Diese Leistung wird aus der Sicht des Benutzers bewertet und in der
+Regel in Form von Durchsatz, Reaktionszeit auf Stimuli oder einer
+Kombination aus beiden bewertet. Performancetests können auch verwendet
+werden, um den Grad der Verfügbarkeit bzw stabilität der Software zu
+bewerten. Für viele Anwendungen in der Telekommunikation oder im
+medizinischen Bereich ist es beispielsweise von entscheidender Bedeutung,
+dass das System immer verfügbar ist.
+
+
+Performancetests sind entscheidend, um festzustellen, ob eine Anwendung die
+Leistungsanforderungen erfüllt (z.B.\ muss das System bis zu 1 000
+gleichzeitige Benutzer verwalten können). Sie helfen auch dabei, Engpässe
+(\Gls{bottleneck}) in einer Anwendung zu lokalisieren. Sie werden auch
+für den Vergleich von zwei oder mehr Systemen verwendet, um das
+leistungsfähigste zu identifizieren (z. B. \Gls{jexam_2009}  und \Gls{jexam_new}).
+Es ermöglicht auch eine effektive Messung der Stabilität in Bezug auf den
+Datenverkehr. Performancetests unterteilen sich in weitere Unterkategorien:
+
+
+\textbf{Lasttests}: Sie sind eine Art von Performancetests,
+bei denen die Anwendung auf ihre Leistung bei normaler und Spitzenbelastung
+getestet wird. Die Leistung einer Anwendung wird im Hinblick auf ihre Reaktion
+auf Benutzeranfragen und ihre Fähigkeit, innerhalb einer akzeptierten Toleranz
+bei unterschiedlichen Benutzerlasten konsistent zu reagieren, überprüft.
+
+
+\textbf{Stresstests}: Sie werden eingesetzt, um Wege zu finden, das System zu
+brechen. Der Test liefert auch den Bereich der maximalen Belastung,
+die das System aushalten kann. In der Regel wird beim Stresstest ein
+schrittweiser Ansatz verfolgt, bei dem die Belastung schrittweise
+erhöht wird. Der Test wird mit einer Last begonnen, für die die Anwendung
+bereits getestet wurde. Dann wird die Last langsam erhöht, um das System
+zu belasten. Der Punkt, an dem wir feststellen, dass die Server nicht mehr
+auf die Anfragen reagieren, wird als Sollbruchstelle betrachtet.
+
+
+Dies sind die einzigen beiden Unterkategorien von Performancetests,
+die in dieser Arbeit verwendet werden.
+
+
+
+\textbf{Penetrationtests}
+
+Ein Penetrationstest ist ein Versuch, die Sicherheit einer IT-Infrastruktur
+zu bewerten, indem auf sichere Weise versucht wird, Schwachstellen
+auszunutzen. Diese Schwachstellen können in Betriebssystemen, Diensten
+und Anwendungsfehlern, unsachgemäßen Konfigurationen oder riskantem
+Verhalten der Endbenutzer bestehen. Solche Bewertungen sind auch nützlich,
+um die Wirksamkeit von Verteidigungsmechanismen und die Einhaltung von
+Sicherheitsrichtlinien durch die Endbenutzer zu überprüfen.
+
+
+Penetrationstests werden in der Regel mit manuellen oder automatisierten
+Technologien durchgeführt, um systematisch Server, Endpunkte, Webanwendungen,
+drahtlose Netzwerke, Netzwerkgeräte, mobile Geräte und andere potenzielle
+Angriffspunkte zu kompromittieren. Sobald die Schwachstellen in einem
+bestimmten System erfolgreich ausgenutzt wurden, können die Tester versuchen,
+das kompromittierte System für weitere Angriffe auf andere interne Ressourcen
+zu nutzen. Insbesondere indem sie versuchen, schrittweise höhere
+Sicherheitsstufen und einen tieferen Zugang zu elektronischen Ressourcen
+und Informationen über die Ausweitung von Berechtigungen zu erreichen.
+
+
+Laut Brad Arkin et al. sind Penetrationstests die am häufigsten und am
+weitesten verbreiteten Best Practices im Bereich der Softwaresicherheit,
+was zum Teil daran liegt, dass es sich um eine attraktive Aktivität am
+Ende des Lebenszyklus handelt (vgl. \citte{1392709}, S.84).  Sobald eine
+Anwendung fertiggestellt ist, sollen die Tester sie im Rahmen der Endabnahme
+Penetrationstests unterziehen. Der Hauptzweck von Penetrationstests besteht
+also darin, Schwachstellen in einem System zu identifizieren, um sie zu
+schließen. Dies ermöglicht es den Testern, die Sicherheit der Anwendung
+zu erhöhen und die Sicherheitsstrategie zu verbessern.
+
+
+So wie funktionale Tests zeigen, wie gut eine Anwendung funktioniert,
+so sind auch nicht-funktionale Tests für die Benutzererfahrung von
+großer Bedeutung.
+
+
