@@ -1,0 +1,101 @@
+\subsection{Funktionale Tests}
+
+Funktionale Tests werden durchgeführt, um zu überprüfen,
+ob alle entwickelten Funktionen mit den funktionalen
+Spezifikationen übereinstimmen. Dies wird durch die
+Ausführung der funktionalen Testfälle erreicht. In der
+Funktionstestphase wird das System getestet, indem
+Eingaben gemacht, Ausgaben überprüft und die
+tatsächlichen Ergebnisse mit den erwarteten
+Ergebnissen verglichen werden. Bei diesen Tests werden
+Benutzeroberfläche, \acs{api}s, Datenbank, Sicherheit,
+Client/Server-Kommunikation und andere Funktionen der zu
+testenden Anwendung überprüft. Die Tests können entweder
+manuell oder durch Automatisierung durchgeführt werden.
+
+\textbf{Unit-Tests}
+
+James Whittaker erklärt, dass "Unit-Test einzelne Softwarekomponenten oder
+eine Sammlung von Komponenten testet" (vgl. \cite{Whittaker2000}, S.70-79).
+Unit-Testing ist die erste Stufe des Softwaretests, bei der einzelne
+Komponenten eines Softwarepakets getestet werden, während der Rest des
+Systems ignoriert wird. Auch Modul- oder Komponententest genannt,
+wird Unit-Test während der Entwicklung einer Anwendung durchgeführt,
+um zu prüfen, ob die einzelnen Einheiten oder Module einer Anwendung
+ordnungsgemäß funktionieren.
+
+
+Das Ziel von Unit-Tests ist es, Probleme in einem frühen Stadium des
+Entwicklungszyklus zu finden. Dadurch werden die Testkosten gesenkt
+(die Kosten für das frühzeitige Auffinden eines Fehlers sind wesentlich
+geringer als die Kosten für das spätere Auffinden). Sie reduzieren Fehler
+bei der Änderung bestehender Funktionen, so dass sie leicht gefunden und
+behoben werden können. Dies vereinfacht den \gls{debug}-Prozess erheblich.
+
+
+\textbf{Integration-Tests}
+
+Es ist eine Erweiterung des Unit-Tests. Beim Integrationstest wird die
+Konnektivität oder der Datentransfer zwischen den einzelnen getesteten
+Modulen (unit tested modules) getestet. Nach Leung und White sind
+Integrationstests die Tests, die durchgeführt werden, wenn alle
+einzelnen Module zu einem funktionierenden Programm kombiniert
+werden (vgl. \cite{131377}, S.290). Das Testen erfolgt auf Modulebene und nicht
+auf Anweisungsebene wie beim Unit-Test. Beim Integrationstest liegt der
+Schwerpunkt auf den Interaktionen zwischen den Modulen und ihren
+Schnittstellen.
+
+
+Mit Integrationstests wird überprüft, ob das funktionale und nicht-funktionale
+Verhalten der Schnittstellen dem Softwaredesign und -spezifikationen
+entspricht. Dies führt dazu, dass Fehler daran gehindert werden, in höhere
+Teststufen zu gelangen.
+
+
+\textbf{System-Tests}
+
+Systemtests sind eine Stufe der Softwaretests über den Integrationstests.
+Laut Briand et al. werden sie an einer vollständigen und voll integrierten
+Anwendung durchgeführt, um die Übereinstimmung des Systems mit den
+spezifizierten Anforderungen zu bewerten (vgl. \cite{briand2002uml}, S.10).
+Bei dieser Art von funktionalen tests validieren die Tester das vollständige
+und integrierte Softwarepaket. Damit wird sichergestellt, dass es den
+Anforderungen entspricht. Bei Bedarf können die Tester Feedback zur
+Funktionalität und Leistung der App oder Website geben, ohne vorher
+zu wissen, wie sie programmiert wurde. Dies hilft den Teams bei der
+Entwicklung von Testfällen, die in Zukunft verwendet werden sollen.
+Systemtests werden auch als End-to-End-Tests bezeichnet.
+
+
+\textbf{Automatisierte Benutzeroberfläche-Tests (\acs{ui} Automation Testing) }
+
+Die erste Interaktion zwischen einem Benutzer und einer Software findet
+über eine grafische Benutzeroberfläche (\acs{gui} acronym) statt. Beim
+\acs{ui}-Testing wird überprüft, ob die Endbenutzeroberfläche korrekt
+funktioniert. Bei der Durchführung von \acs{ui}-Tests wird geprüft, ob jedes
+Stückchen Logik, jede \acs{ui}-Funktion oder jeder Aktionsablauf wie erwartet
+funktioniert. Hier konzentrieren sich die Tester auf die Validierung jedes
+Klicks auf eine Schaltfläche, der Dateneingabe, der Navigation, der
+Berechnung von Werten und anderer Funktionalitäten, die für die
+Benutzerinteraktion verwendet werden.
+
+
+\acs{ui} Automation Testing ist eine Technik, bei der diese Testprozesse mithilfe
+eines Automatisierungstools durchgeführt werden. Anstatt dass sich die
+Tester durch die Anwendung klicken, um die Daten- und Aktionsflüsse
+visuell zu überprüfen, werden für jeden Testfall Testskripte geschrieben.
+Anschließend wird eine Reihe von Schritten hinzugefügt, die bei der
+Überprüfung der Daten zu befolgen sind. Der Prozess der
+\acs{ui}-Automatisierungstests vereinfacht die Erstellung von UI-Tests, die
+Ausführung der Tests und die Anzeige der Ergebnisse (vgl.\cite{Perfecto2020}).
+Es ermöglicht Testern, die Interaktion einer Anwendung mit den Endnutzern zu
+simulieren und zu testen. Weitere Vorteile sind die Automatisierung aller
+Testaktivitäten für die zu testende Anwendung und die Integration von
+Benutzerschnittstellentests in den Entwicklungsprozess.
+
+
+Automatisiertes Testen ist eine der Funktionen, die im Mittelpunkt dieser
+Arbeit stehen. Es ist daher wichtig, dieses Konzept zu verstehen, um
+weiterzukommen.
+
+
