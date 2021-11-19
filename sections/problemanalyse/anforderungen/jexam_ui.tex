@@ -1,0 +1,23 @@
+\subsection{Jexam UI-Tests}
+
+Diese Methode erm\"oglicht es, eine Plattform sowie ihre Funktionen anhand
+ihrer grafischen Benutzeroberfl\"ache (\acs{UI} oder \Gls{frontend}) zu
+testen. Mit Hilfe moderner Werkzeuge und Frameworks ist es m\"oglich, die
+Kontrolle \"uber einen Webbrowser vollautomatisch zu \"ubernehmen. Dies
+erm\"oglicht es, das Verhalten eines Benutzers auf einer Weboberfl\"ache zu
+simulieren. Es wurde jedoch bereits erw\"ahnt, dass \Gls{jexam_2009} und \Gls{jexam_new}
+die gleiche grafische Benutzeroberfl\"ache haben. Es gibt jedoch einige
+bemerkenswerte Unterschiede im Frontend-Code der beiden Plattformen,
+die bei der Entwicklung von Tests Probleme verursachen k\"onnten
+(siehe \Cref{fig:old_new}). Trotzdem gibt es eine
+M\"oglichkeit, die Tests nur einmal und f\"ur alle 02
+Plattformen zu schreiben. Auf diese Weise sparen die Tester Zeit und k\"onnen
+herausfinden, ob \Gls{jexam_new} genauso gut funktioniert wie sein Vorg\"anger.
+
+\noindent
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{images/jexam_compare}
+    \caption{Frontend Quelltext von Jexam\_2009 und Jexam\_new} \label{fig:old_new}
+\end{figure}
+
