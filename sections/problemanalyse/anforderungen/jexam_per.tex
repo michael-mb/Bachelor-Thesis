@@ -15,10 +15,27 @@ die Leistung zu testen. Die Performance einer Webanwendung spielt eine
 entscheidende Rolle f\"ur die Benutzererfahrung. Jexam hat Dienste,
 die immer in Echtzeit verf\"ugbar sein m\"ussen. Mithilfe von 
 Performancetests kann die Anwendung unter bestimmten Bedingungen 
-getestet werden, um sie zu bewerten. Die beiden Versionen sollten 
-daher getestet und verglichen werden, um eine m\"ogliche Leistungssteigerung
-zu untersuchen. Dies wird es auch erm\"oglichen, nach einer \"anderung 
-zu beobachten, ob es einen Leistungsr\"uckgang oder Bottlenecks gegeben
-hat.  Aus denselben Gr\"unden wie die Sicherheitstests sollten auch die 
-Performancetests in Form von Skripten geschrieben und vollautomatisch
-ausgef\"uhrt werden. 
+getestet werden, um sie zu bewerten.
+
+Die einzelnen Schritte des Leistungstests sind von Unternehmen
+zu Unternehmen und von Anwendung zu Anwendung unterschiedlich.
+Sie hängen davon ab, welche Leistungsindikatoren das Unternehmen für
+besonders wichtig hält. Die allgemeinen Ziele von Leistungstests
+sind jedoch weitgehend identisch, so dass es einen bestimmten
+Arbeitsablauf gibt, dem die meisten Testpläne folgen. Daher ist es
+wichtig, die Einschränkungen, Ziele und Schwellenwerte festzulegen,
+die den Erfolg des Tests belegen. Die wichtigsten Kriterien,
+die für die Tests von Jexam verwendet werden, sind:
+
+\noindent
+\begin{enumerate}
+    \item Die Seiten von Jexam müssen in weniger als 3 Sekunden laden,
+    wenn 100 Benutzer gleichzeitig eine Anfrage stellen.
+    \item Die Anwendung darf nicht spucken, wenn 2000 Nutzer
+    gleichzeitig eine Seite anfordern.
+\end{enumerate}
+
+Die beiden Versionen sollten daher getestet und verglichen werden,
+um eine mögliche Leistungssteigerung zu untersuchen.
+Dies wird es auch ermöglichen, nach einer Änderung zu beobachten, ob
+es einen Leistungsrückgang gegeben oder zum Bottlenecks geführt hat.

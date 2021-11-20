@@ -10,9 +10,17 @@ die gleiche grafische Benutzeroberfl\"ache haben. Es gibt jedoch einige
 bemerkenswerte Unterschiede im Frontend-Code der beiden Plattformen,
 die bei der Entwicklung von Tests Probleme verursachen k\"onnten
 (siehe \Cref{fig:old_new}). Trotzdem gibt es eine
-M\"oglichkeit, die Tests nur einmal und f\"ur alle 02
+M\"oglichkeit, die Tests nur einmal und f\"ur alle zwei
 Plattformen zu schreiben. Auf diese Weise sparen die Tester Zeit und k\"onnen
-herausfinden, ob \Gls{jexam_new} genauso gut funktioniert wie sein Vorg\"anger.
+herausfinden, ob \Gls{jexam_new} genauso gut funktioniert wie sein Vorg\"anger. Zu den Funktionen, die getestet werden müssen, gehören :
+\begin{enumerate}
+    \item Login
+    \item Registrierung
+    \item Abruf der Noten in der Übersicht und als pdf
+    \item Einschreibung in Prüfungen
+    \item Einschreibung in Lehrveranstaltungen
+    \item Einschreibung in Seminargruppen
+\end{enumerate}
 
 \noindent
 \begin{figure}

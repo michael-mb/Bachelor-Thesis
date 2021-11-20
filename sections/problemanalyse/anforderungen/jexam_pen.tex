@@ -1,18 +1,37 @@
-\subsection{Jexam Penetrationtests}
+\subsection{Jexam Sicherheitstests}
 
 Keine Software ist frei von Fehlern und Bugs. Dennoch muss eine qualitativ
 hochwertige Anwendung ihren Nutzern Datenschutz garantieren. Das gilt
-auch f\"ur Jexam. Sicherheits- oder Penetrationstests sind eine schwierige
-Aufgabe. Der Penetrationstest ist eine haupts\"achlich manuelle Aktivit\"at,
-aber aufgrund des Ressourcenmangels im Jexam-Team muss den Prozess
-automatisiert werden. Es ist geplant, Skripte zu schreiben, die die
-Jexam-Anwendung im Lichte der derzeit bekannten Web-Schwachstellen
-untersuchen. Auf diese Weise ist es m\"oglich hohe Vulnerabilit\"aten
-erkennen, wenn sie vorhanden sind.
+auch f\"ur Jexam. Das Sicherheits- oder Penetrationstesten  ist eine schwierige
+Aufgabe. Das Penetrationstesten ist eine haupts\"achlich manuelle Aktivit\"at.
+
+Experten-Penetrationtester sind ein wesentlicher Bestandteil
+von Penetrationtests. Zunächst verwenden sie Schwachstellenscanner.
+Es handelt sich um automatisierte Tools , die eine Umgebung untersuchen
+und nach Abschluss der Untersuchung einen Bericht über die
+gefundenen Schwachstellen erstellen. Diese Scanner listen diese
+Schwachstellen häufig mithilfe von \Gls{cve} auf, die Informationen
+über bekannte Schwachstellen liefern. Da Scanner Tausende von
+Schwachstellen entdecken können, kann es sein, dass es
+genügend schwerwiegende Schwachstellen gibt, die eine zusätzliche
+Priorisierung erforderlich machen.
 
 
-Penetrationstests k\"onnen also auch beim Vergleich der beiden Versionen von
-jexam helfen. Es wird erfahren, ob die neue Version mehr oder weniger
-Schwachstellen hat als die alte. Dadurch k\"onnen m\"ogliche
-Sicherheitsl\"ucken behoben werden.
+Für komplexe Tests, bei denen tief in verschiedene Systeme und
+Anwendungen eingedrungen werden muss oder Übungen mit mehreren
+Angriffsketten durchgeführt werden müssen, wird immer eine
+erfahrenere Person oder ein erfahrenes Team benötigt. Um ein
+realistisches Angriffsszenario zu testen, ist ein Team erforderlich,
+das ausgeklügelte Strategien und Lösungen verwendet, die den
+Techniken der Bedrohungsakteure ähneln.
 
+
+Aufgrund des Ressourcenmangels im Jexam-Team muss den Prozess
+automatisiert werden.  Daher sollte die Sicherheit nur
+oberflächlich mit einem Schwachstellen-Scanner getestet werden.
+Auf diese Weise ist es möglich hohe Vulnerabilitäten
+herauszufinden, wenn sie vorhanden sind. Schwachstellen-Scans
+können also auch beim Vergleich der beiden Versionen von jexam
+helfen. Es wird erfahren, ob die neue Version mehr oder weniger
+Schwachstellen hat als die alte. Dadurch können mögliche
+Sicherheitslücken behoben werden.
