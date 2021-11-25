@@ -1,0 +1,28 @@
+\subsubsection{Fehler in der Authentifizierung}
+
+Wenn die Authentifizierungsfunktionen  einer Anwendung nicht korrekt
+implementiert sind, können Angreifer Passwörter oder Sitzungs-IDs
+kompromittieren oder andere Implementierungsfehler ausnutzen, indem
+sie die Anmeldedaten anderer Benutzer verwenden. Diese Schwachstelle
+wird als "Fehler in der Authentifizierung " (Broken authentication
+in Englisch) bezeichnet. Es wird in der Regel durch schlecht
+implementierte Authentifizierungs- und Sitzungsverwaltungsfunktionen
+verursacht. In diesem Fall Angriffe zielen darauf ab, die Kontrolle
+über ein oder mehrere Benutzerkonten zu erlangen, indem der Angreifer
+die gleichen Privilegien erhält wie der angegriffene Benutzer.
+Es wird von "Fehler in der Authentifizierung" besprochen , wenn
+Angreifer in der Lage sind, Passwörter, Schlüssel oder
+Sitzungs-Tokens, Benutzerkontoinformationen und andere
+Details zu kompromittieren, um Benutzeridentitäten zu übernehmen.
+Zu den üblichen Risikofaktoren gehören:
+
+
+\begin{enumerate}
+    \item Vorhersehbare Anmeldekennungen
+    \item Benutzerauthentifizierungskennungen, die nicht geschützt sind, wenn sie gespeichert werden.
+    \item Sitzungs-IDs, die in der URL offengelegt werden (z. B. durch URL-Rewriting).
+    \item Sitzungs-IDs, die anfällig für Session-Fixing-Angriffe sind.
+    \item Sitzungswert, der nach dem Abmelden nicht unterbrochen oder ungültig gemacht wird.
+    \item Sitzungskennungen, die nach einer erfolgreichen Anmeldung nicht erneuert werden.
+    \item Passwörter, Sitzungskennungen und andere Identifikationsinformationen, die über unverschlüsselte Verbindungen gesendet werden.
+\end{enumerate}

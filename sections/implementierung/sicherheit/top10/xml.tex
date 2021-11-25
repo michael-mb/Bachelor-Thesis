@@ -1,0 +1,23 @@
+\subsubsection{XML External Entities (XML)}
+
+\acs{xml} External Entity Injection (auch bekannt als \acs{xxe}) ist eine
+Sicherheitslücke, die einem Angreifer ermöglicht, in die Verarbeitung
+von \acs{xml}-Daten durch eine Anwendung einzugreifen. Dieser Angriff
+erfolgt, wenn die \acs{xml}-Eingabe, die einen Verweis auf eine externe
+Entität enthält, von einem schwach konfigurierten \acs{xml}-Parser
+verarbeitet wird. Dieser Angriff kann zur Offenlegung vertraulicher
+Daten, Denial of Service, serverseitiger Anfragefälschung,
+Portanalyse aus der Sicht des Computers, auf dem sich der Parser
+befindet, und anderen Auswirkungen auf das System führen. Um \acs{xxe}
+Injections zu verhindern, sollen folgende Punkte beachtet werden:
+
+
+\begin{enumerate}
+    \item Einfachere Datenformate wie JSON zur Datenübertragung verwenden.
+    \item Das Verbot in allen \acs{xml}-Parsern, \acs{xml}-Entitäten
+     und \acs{dtd}s verändern. \acs{dtd} steht für Document Type Definition und
+     bezeichnet einen XML Dokument, in welchem XML-Entities
+     definiert werden. Auf dieser Weise wird vermieden,
+     dass ein Benutzer eigenen Entities erstellt.
+    \item Deaktivierung des Hochladens von XML-Dateien
+\end{enumerate}

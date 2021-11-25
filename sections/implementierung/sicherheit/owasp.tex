@@ -1,0 +1,58 @@
+\subsection{\acs{owasp}}
+
+\acs{owasp} ist das Akronym für \textbf{O}pen \textbf{W}eb
+\textbf{A}pplication \textbf{S}ecurity \textbf{P}roject und
+beschreibt eine offene Organisation, deren Hauptziel ist, die
+Sicherheit von Anwendungen, Diensten und Software zu verbessern.
+Sie wurde am 1. Dezember 2001 gegründet und am 21. April 2004 als
+gemeinnützige Organisation offiziell anerkannt.  Sie ermöglicht
+Organisationen, Unternehmen oder Einzelpersonen, sichere Anwendungen zu
+entwickeln und zu warten. Die \acs{owasp} hat eine Reihe von
+Sicherheitstools und -richtlinien entwickelt. Dazu gehören die \acs{owasp}
+Top 10 und der Zed Attack Proxy (\acs{zap}). Ein wichtiger
+Grundsatz der OWASP ist, dass jeder, der sich für die Sicherheit
+von Webanwendungen interessiert, weltweit kostenlos über das
+nötige Wissen und die Werkzeuge verfügen kann (vgl. \cite{owasp}).
+In diesem Zusammenhang hat sie die OWASP TOP 10 erstellt, die eine
+Liste der zehn häufigsten Sicherheitslücken im Internet
+darstellt. Ihr Hauptzweck ist die Schulung all jener, die mit der
+Entwicklung sicherer Anwendungen zu tun haben.  Sie sollen über die
+üblichsten Sicherheitslücken informiert werden und dadurch diese
+vermeiden.  Im Folgenden werden die zehn Angriffe der OWASP TOP
+10 auf der Basis der OWASP TOP 10 2017 
+Release Candidate 2 (vgl. \cite{Stock2017}) beschrieben.
+
+\begin{table}[h]
+    \begin{tabulary}{\textwidth}{@{}L@{}}
+        \toprule
+        \textbf{OWASP TOP10 2017} \tabularnewline\midrule
+        1"~ Injektion (Injection)
+        \tabularnewline
+        2"~ Fehler in der Authentifizierung (Broken Authentication)
+        \tabularnewline
+        3"~ Verlust der Vertraulichkeit von Daten (Sensitive Data Exposure)
+        \tabularnewline
+        4"~ XML External Entities (XML)
+        \tabularnewline
+        5"~ Fehler in der Zugriffskontrolle (Broken Access Control)
+        \tabularnewline
+        6"~ Sicherheitsrelevante Fehlkonfiguration (Security Misconfiguration)
+        \tabularnewline
+        7"~ Cross-Site-Scripting (XSS)
+        \tabularnewline
+        8"~ Unsichere Deserialisierung (Insecure Deserialization)
+        \tabularnewline
+        9"~ Nutzung von Komponenten mit bekannten Schwachstellen (Using Components with Known Vulnerabilities)
+        \tabularnewline
+        10"~ Unzureichendes Logging und Monitoring (Insufficient Logging and Monitoring)
+        \tabularnewline\bottomrule
+    \end{tabulary}
+    \caption{OWASP TOP 10 2017}\label{tab:OWASP_TOP_10}
+\end{table}
+
+\input{sections/implementierung/sicherheit/top10/injection.tex}
+\input{sections/implementierung/sicherheit/top10/auth.tex}
+\input{sections/implementierung/sicherheit/top10/vertraulichkeit.tex}
+\input{sections/implementierung/sicherheit/top10/xml.tex}
+\input{sections/implementierung/sicherheit/top10/zugriff.tex}
+

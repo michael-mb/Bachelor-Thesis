@@ -1,0 +1,48 @@
+\subsubsection{Injektion}
+
+Eine Injektion ist eine Schwachstelle, die einem Angreifer ermöglicht,
+bösartigen Code durch eine Anwendung auf ein anderes System zu
+schleusen. Dabei können sowohl Backend-Systeme als auch andere
+Clients, die mit der angreifbaren Anwendung verbunden sind, gefährdet
+werden. Zu den Auswirkungen dieser Angriffe gehören:
+
+\begin{enumerate}
+    \item Einem Angreifer erlauben, Betriebssystemaufrufe auf einem
+    Zielrechner auszuführen.
+    \item Einem Angreifer ermöglichen, Backend-Datenspeicher
+    zu kompromittieren.
+    \item Einem Angreifer ermöglichen, die Sitzungen anderer
+    Benutzer zu kompromittieren oder umzuleiten.
+    \item Einem Angreifer erlauben, Aktionen im Namen anderer
+    Benutzer oder Dienste zu erzwingen.
+\end{enumerate}
+
+Viele Webanwendungen hängen von Betriebssystemfunktionen, externen
+Programmen und der Verarbeitung von Datenabfragen ab, die von
+Benutzern eingereicht werden. Wenn eine Webanwendung Informationen
+aus einer HTTP-Anfrage als Teil einer externen Anfrage weitergibt,
+sollten Sie eine Möglichkeit zur Überprüfung und Validierung der
+Nachricht einrichten. Andernfalls kann ein Angreifer spezielle
+(Meta-)Zeichen, bösartige Befehle/Codes oder Befehlsmodifikatoren in
+die Nachricht einfügen. Diese Angriffe sind zwar nicht schwer zu
+auszuführen, aber es gibt immer mehr Tools, die nach diesen
+Fehlern suchen. Ein Angreifer kann diese Techniken nutzen, um den
+Inhalt Ihrer Datenbank zu erhalten, zu beschädigen oder zu zerstören,
+Backend-Systeme zu kompromittieren oder andere Benutzer anzugreifen.
+Erfolgreiche Injektionsangriffe können ein System vollständig
+gefährden oder zerstören. Es ist wichtig, auf diese Arten von
+Angriffen zu testen und sich dagegen zu schützen.
+
+Als Beispiel kann man die SQL-Injektion nennen. Diese ist eine
+besonders weit verbreitete und gefährliche Form der Injektion.
+Um einen SQL-Injektion-Fehler auszunutzen, muss ein Angreifer
+einen Parameter finden, den die Webanwendung an eine
+Datenbankinteraktion weitergibt. Ein Angreifer kann dann
+bösartige SQL-Befehle in den Inhalt des Parameters einbetten.
+Das bringt die Webanwendung dazu, eine bösartige Abfrage an die
+Datenbank weiterzuleiten. SQL-Abfragen könnten durch Hinzufügen
+zusätzlicher "Einschränkungen" zu einer Anweisung (z. B. OR 1=1)
+geändert werden, um Zugriff auf nicht autorisierte Daten zu
+erhalten oder diese zu ändern.
+
+
