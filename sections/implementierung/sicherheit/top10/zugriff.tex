@@ -1,1 +1,46 @@
 \subsubsection{Fehler in der Zugriffskontrolle}
+
+Fehler in der Zugriffskontrolle ist eine Sicherheitslücke,
+die es Angreifern ermöglicht, Berechtigungsgarantien zu
+umgehen und Tätigkeiten auszuführen, als wären sie
+privilegierte Benutzer.
+
+Die Zugriffskontrolle sorgt dafür, dass Benutzer nicht
+außerhalb der ihnen zugewiesenen Befugnisse handeln
+können. Fehler führen in der Regel zur unbefugten
+Offenlegung von Informationen, zur Änderung oder Zerstörung
+aller Daten oder zur Ausführung einer Geschäftsfunktion
+außerhalb der Grenzen des Benutzers. Häufige Schwachstellen
+bei der Zugriffskontrolle sind:
+
+\begin{enumerate}
+    \item Umgehung von Zugriffskontrollprüfungen durch
+    Änderung der URL, des internen Anwendungsstatus oder
+    der HTML-Seite oder einfach durch Verwendung eines
+    benutzerdefinierten API-Angriffstools.
+
+    \item Ermöglichung der Änderung des Primärschlüssels
+    in den Datensatz eines anderen Benutzers, wodurch
+    die Anzeige oder Bearbeitung des Kontos eines anderen
+    Benutzers ermöglicht wird.
+
+    \item Ausweitung der Rechte. Als Benutzer handeln, ohne
+    eingeloggt zu sein, oder als Administrator handeln, wenn
+    man als Benutzer eingeloggt ist.
+
+    \item Manipulation von Metadaten, wie z. B. die
+    Wiedergabe oder Manipulation eines JSON Web Token
+    (JWT)-Zugangskontrolltokens oder eines Cookies oder
+    eines versteckten Feldes, das manipuliert wurde, um
+    die Privilegien zu erhöhen, oder der Missbrauch der
+    JWT-Ungültigkeitserklärung.
+
+    \item CORS-Fehlkonfiguration ermöglicht
+    nicht autorisierten API-Zugriff.
+
+    \item Erzwingen des Navigierens auf authentifizierten
+    Seiten als nicht authentifizierter Benutzer oder
+    auf privilegierten Seiten als Standardbenutzer.
+    Zugriff auf API mit fehlenden Zugriffskontrollen
+    für POST, PUT und DELETE.
+\end{enumerate}
