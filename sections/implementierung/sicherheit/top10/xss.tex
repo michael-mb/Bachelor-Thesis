@@ -1,1 +1,41 @@
 \subsubsection{Cross-Site-Scripting (XSS)}
+
+Cross-Site-Scripting (XSS)-Angriffe sind eine Art von
+Injektion, bei der bösartige Skripte in Websites
+eingeschleust werden (vgl. \cite{xss}). Cross-Site
+Scripting (XSS)-Angriffe treten auf, wenn :
+
+\begin{enumerate}
+    \item Daten gelangen über eine nicht vertrauenswürdige
+    Quelle, meist eine Webanfrage, in eine Webanwendung.
+    \item Die Daten sind in einem dynamischen Inhalt
+    enthalten, der an einen Webnutzer gesendet wird,
+    ohne auf bösartige Inhalte überprüft zu werden.
+\end{enumerate}
+
+Der Browser des Benutzers hat keine Möglichkeit zu erkennen,
+dass das Skript nicht vertrauenswürdig ist, und führt es
+aus. Da er glaubt, dass das Skript aus einer
+vertrauenswürdigen Quelle stammt, kann das bösartige
+Skript auf alle Cookies, Sitzungstoken oder andere
+sensible Informationen zugreifen, die vom Browser
+gespeichert und mit dieser Website verwendet werden.
+Diese Skripte können sogar den Inhalt der HTML-Seite
+umschreiben.
+
+
+Der bösartige Inhalt, der an den Webbrowser gesendet
+wird, hat häufig die Form eines JavaScript-Segments,
+kann aber auch HTML, Flash oder jede andere Art von
+Code enthalten, die der Browser ausführen kann. Die
+Vielfalt der XSS-basierten Angriffe ist nahezu unbegrenzt,
+aber sie umfassen in der Regel :
+
+\begin{enumerate}
+    \item Die Übermittlung privater Daten wie Cookies oder
+    andere Sitzungsinformationen an den Angreifer.
+    \item Die Umleitung des Opfers auf Webinhalte,
+    die vom Angreifer kontrolliert werden.
+    \item die Ausführung anderer bösartiger Operationen auf
+    dem Rechner des Benutzers unter der verwundbaren Website.
+\end{enumerate}
