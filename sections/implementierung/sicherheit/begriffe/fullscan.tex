@@ -11,13 +11,10 @@ Das Skript führt echte "Angriffe" aus  und kann potenziell über einen
 längeren Zeitraum (mehrere Stunden) laufen. Das Skript ist jedoch viel
 effizienter und findet mehr  Sicherheitslücken als ZAP Baseline.
 
-\begin{lstlisting}[language=Dockerfile,label={lst:fullscan},caption={ZAP Baseline Script}]
+\begin{lstlisting}[language=Dockerfile,label={lst:fullscan},caption={ZAP Fullscan Ausführungsbefehl}]
 command: [ "./wait-for-it.sh", "web:8080", "bash" ,"-c",
 "zap-full-scan.py -d -j -m 1 -t http://web:8080 -r owaspReport.html" ]
 
-# Web:8080 : URL der Neuen Version von jExam, die sich im Container namens Web befindet
-# ./wait-for-it.sh : Script, das einen Healt-Check ausführt, um herauszufinden, ob die parametrisierte Anwendung (In diesem Fall Web:8080) bereits gestartet ist.
-# owaspReport.html : Webseite, die am Ende der Testdurchführung generiert wird
 \end{lstlisting}
 
 
