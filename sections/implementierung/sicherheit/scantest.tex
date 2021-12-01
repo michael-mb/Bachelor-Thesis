@@ -1,1 +1,40 @@
-\section{Tests und Ergebnisse}
+\subsection{Tests und Ergebnisse}
+
+Die Testinfrastruktur von jExam wurde mit Docker unter Verwendung
+von docker-compose entwickelt. Dies bietet die Möglichkeit, die
+Testdienste in verschiedene Container aufzuteilen (dieses Konzept
+wird in den nächsten Kapiteln ausführlich behandelt). Zu den
+Testdiensten gehört auch ein Container, der speziell für Sicherheitstests
+vorgesehen ist und automatisch bestimmte Befehle ausführt, um eine Version
+von jExam zu scannen. Zunächst ist es notwendig, einige Begriffe zu
+erklären, die im Folgenden verwendet werden.
+
+\input{sections/implementierung/sicherheit/begriffe/spider.tex}
+\input{sections/implementierung/sicherheit/begriffe/ajax.tex}
+\input{sections/implementierung/sicherheit/begriffe/passive.tex}
+\input{sections/implementierung/sicherheit/begriffe/active.tex}
+
+
+Auf der jExam-Plattform wurden zwei Skripte für ihre Ausführung
+implementiert. Es handelt sich dabei um die Skripte ZAP Baseline und
+ZAP Full scan.  Da es zwei Versionen von jExam gibt, muss bei der
+Ausführung der Skripte entschieden werden, welche der beiden Plattformen
+getestet werden soll.
+
+\input{sections/implementierung/sicherheit/begriffe/baseline.tex}
+\input{sections/implementierung/sicherheit/begriffe/fullscan.tex}
+
+
+
+Die Sicherheit einer Anwendung zu testen ist eine schwierige Aufgabe,
+aber Werkzeuge wie Zap machen die Tür zu diesem Bereich der Programmierung
+immer kleiner. Mit Hilfe der Scanner ist es möglich, Sicherheitslücken zu
+finden, die den Entwicklern ermöglichen, sie zu beheben. Dadurch wird eine
+gute Softwarequalität für die Zukunft gewährleistet.
+
+
+
+
+
+
+

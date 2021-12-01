@@ -1,0 +1,29 @@
+\subsubsection{Passive Scanning}
+
+Passive Scanning ist eine Methode zur Erkennung von Schwachstellen, die auf
+Informationen basiert, die aus Netzwerkdaten gesammelt werden. Beim Sammeln
+dieser Informationen gibt es keine direkte Interaktion mit der Zielanwendung
+(deshalb passiv). Beim passiven Scannen wird der gesamte Datenverkehr zwischen
+dem Browser und der Website gelesen und aufgezeichnet, d. h. die POSTs/GETs
+und ihre Antworten. ZAP analysiert diese Daten und sucht in seiner
+Angriffsbibliothek nach bekannten Problemen. Passives Scannen führt keine
+Angriffe aus und wird daher als harmlos angesehen. Beim passiven Scannen
+können viele mögliche Fehler und Schwachstellen in einer Webanwendung
+entdeckt werden.  Zu den bekanntesten gehören :
+
+\begin{enumerate}
+    \item Cross Domain Script Inclusion
+    \item Cross Domain Misconfiguration
+    \item X-Debug-Token Information Leak
+    \item Username Hash Found
+    \item Insecure Authentication
+    \item Information Disclosure: Suspicious Comments
+    \item Information Disclosure: Referrer
+    \item Information Disclosure: In URL
+    \item Information Disclosure: Debug Errors
+    \item CSRF Countermeasures
+\end{enumerate}
+
+Diese Sicherheitslücken werden in dieser Arbeit nicht näher erläutert.
+Informationen zu diesen Sicherheitslücken sind jedoch auf der Website von Zap Proxy
+zu finden (vgl. \cite{passiv}).

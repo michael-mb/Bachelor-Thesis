@@ -1,0 +1,19 @@
+\subsubsection{ZAP Baseline}
+
+Dieses Skript führt zuerst einen ZAP-Spider und dann ein Passiv Scanning
+anhand der Daten aus dem Spider aus. Dies ist ein schneller und gründlicher
+Prozess, der es ermöglicht, schnell zu erkennen, ob es ernsthafte
+Schwachstellen gibt, die leicht ausgenutzt werden können. Schließlich erstellt
+das Skript einen Bericht (siehe \Cref{fig:baseline}), der von den Testern sorgfältig geprüft werden muss.
+Das Skript führt keinen echten "Angriff" durch und läuft nur für eine
+relativ kurze Zeit (höchstens ein paar Minuten).
+
+
+\begin{lstlisting}[language=Dockerfile,label={lst:baseline},caption={ZAP Baseline Script}]
+command: [ "./wait-for-it.sh", "web:8080", "bash" ,"-c",
+"zap-baseline.py -t http://web:8080 -r owaspReport.html" ]
+
+# Web:8080 : URL der Neuen Version von jExam, die sich im Container namens Web befindet
+# ./wait-for-it.sh : Script, das einen Healt-Check ausführt, um herauszufinden, ob die parametrisierte Anwendung (In diesem Fall Web:8080) bereits gestartet ist.
+# owaspReport.html : Webseite, die am Ende der Testdurchführung generiert wird
+\end{lstlisting}
