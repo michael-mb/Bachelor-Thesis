@@ -1,0 +1,40 @@
+\subsubsection{Selenium Webdriver}
+
+Selenium ist ein Open-Source-projekt für eine Reihe von Tools und Bibliotheken
+zur Unterstützung der Webbrowser-Automatisierung (vgl. \cite{selenium-survey}).
+Selenium bietet  Werkzeuge zur Erstellung funktionaler Tests, ohne dass eine
+Testskriptsprache erlernt werden muss. Außerdem bietet es eine testspezifische
+Sprache (Selenese), mit der Tests in einer Reihe beliebter Programmiersprachen
+geschrieben werden können, darunter JavaScript (Node.js), C#, Groovy, Java,
+Perl, PHP, Python, Ruby und Scala. Die Tests können dann mit den meisten
+modernen Webbrowsern ausgeführt werden. Selenium läuft auf Windows, Linux
+und macOS. Selenium besteht aus mehreren Komponenten, von denen jede eine
+bestimmte Rolle bei der Entwicklung der Testautomatisierung von Webanwendungen
+übernimmt. Zu diesen Komponenten gehören: die Selenium IDE, Selenium Client API,
+Selenium Remote Control, Selenium Grid und schließlich der Selenium WebDriver,
+der in dieser Arbeit verwendet wird.
+
+Das Kernelement von Selenium ist Selenium WebDriver, eine Schnittstelle zum
+Schreiben von Anweisungen, die in verschiedenen Browsern austauschbar sind.
+Selenium WebDriver nimmt Befehle entgegen (die in \Gls{selenese} oder über eine
+Client-API gesendet werden) und sendet sie an einen Browser. Dies wird durch
+einen browserspezifischen Browsertreiber implementiert, der Befehle an einen
+Browser sendet und Ergebnisse abruft. Die meisten Browsertreiber starten
+tatsächlich eine Browseranwendung (z. B. Firefox, Google Chrome, Internet
+Explorer, Safari oder Microsoft Edge) und greifen darauf zu. Selenium WebDriver
+benötigt keinen speziellen Server, um Tests auszuführen. Stattdessen startet
+der WebDriver direkt eine Browserinstanz und steuert sie.  Wo immer möglich,
+verwendet WebDriver native Funktionen auf Betriebssystemebene und nicht
+browserbasierte JavaScript-Befehle zur Steuerung des Browsers. Dadurch werden
+Probleme mit subtilen Unterschieden zwischen nativen und JavaScript-Befehlen,
+einschließlich Sicherheitseinschränkungen, vermieden (vgl. \cite{Stewart2016}).
+Selenium WebDriver ist vollständig implementiert und wird in JavaScript
+(Node.js), Python, Ruby, Java, Kotlin und C# unterstützt.
+
+
+Selenium ist derzeit das von Testern am meisten geliebte Framework für
+UI-Testing (vgl. \cite{selenium-survey} , S. 08-09). Es hat viele Vorteile,
+wie z.B. die Übertragbarkeit auf alle Systeme, die einfache Integration mit
+andere Technologien, eine große und dynamische Entwicklergemeinschaft sowie
+die Dokumentation und die Fülle an verfügbaren Ressourcen. Im Rahmen dieser
+Arbeit wird der Selenium Web Driver mit der Programmiersprache Java verwendet.
