@@ -1,1 +1,38 @@
 \subsubsection{TestNG}
+
+TestNG ist ein Open-Source-Testautomatisierungs-Framework für Java. Es wird
+nach dem Vorbild von JUnit und NUnit entwickelt. Einige fortgeschrittene und
+nützliche Funktionen, die TestNG bietet, machen es zu einem robusteren
+Framework im Vergleich zu seinen Mitbewerbern (vgl. \cite{browserstack}).
+Das NG in TestNG steht für "Next Generation". Es wird immer häufiger von
+Entwicklern und Testern bei der Erstellung von Testfällen verwendet, da es
+einfach ist, mehrere Annotationen, Gruppierungen, Abhängigkeiten,
+Priorisierungen und Parametrierungsfunktionen zu verwenden. Durch die
+Beseitigung der meisten Einschränkungen des älteren Frameworks gibt TestNG
+dem Entwickler die Möglichkeit, flexiblere und leistungsfähigere Tests zu
+schreiben.
+
+Der Hauptgrund, warum TestNG für die Entwicklung der Tests in dieser
+Arbeit ausgewählt wurde, ist in erster Linie die Tatsache, dass es im
+Vergleich zu seinem Konkurrenten JUnit mehr nützliche Funktionen
+bietet (vgl. \cite{browserstack}):
+
+\begin{enumerate}
+    \item Annotationen von TestNG sind im Vergleich zu JUnit
+    einfacher zu verstehen
+    \item TestNG erfordert im Gegensatz zu JUnit keine
+    obligatorische Deklaration von @BeforeClass und @AfterClass
+    \item Die Funktion der Parametrisierung, die TestNG bietet, ist
+    bequemer und einfacher durch den Datenprovider zu nutzen.
+    \item Funktionen wie Priorisierung und Gruppierung von Tests,
+    die von TestNG bereitgestellt werden, machen es im Vergleich zu
+    JUnit realistischer und leichter anpassbar.
+    \item TestNG bietet im Vergleich zu JUnit in mehrfacher
+    Hinsicht die Möglichkeit der parallelen Testausführung.
+
+\end{enumerate}
+
+Neben diesen Vorteilen gegenüber JUnit lässt sich TestNG leicht in das
+Selenium-Framework integrieren. Dies macht es zu einem der am häufigsten
+verwendeten Werkzeuge für das Schreiben von Selenium-Testskripten
+(vgl. \cite{selenium-survey}, S.13).
