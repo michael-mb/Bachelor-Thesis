@@ -1,0 +1,31 @@
+\subsubsection{Factory}
+
+Page Factory ist eine Klasse, die von Selenium WebDriver bereitgestellt
+wird, um das Page Object Model zu implementieren. Das Page Object
+Repository wird mit Hilfe des Page Factory-Konzepts von den Testmethoden
+getrennt. Page Factory bietet Annotationen, um Elemente zu initialisieren und sie
+anschaulich und lesbar macht. Zu den Vorteilen seiner Verwendung gehören:
+
+\begin{enumerate}
+    \item \textbf{Sauberer Code}: Das definierte Webelement wird von den Methoden
+    getrennt, um eine Webseite in einer Page Object sauber und
+    aufgeräumt zu gestalten.
+    \item \textbf{Lesbar und beschreibend}: Ein Webelement wird als Variable
+    (bekannt als Object Field) deklariert, und die Field-Annotation
+    (@FindBy siehe \Cref{fig:page-exp}) wird verwendet, um den Namen, den Typ und
+    die Position des Elements zu beschreiben. Auf diese Weise können
+    definierte Webelement anhand seiner Annotationen wie Name, Typ
+    usw. leicht identifiziert werden.
+    \item \textbf{Einfache Wartbarkeit}: Das definierte Webelement kann ohne
+    Neudefinition überall in der Page Object Klasse und den Unterklassen
+    verwendet werden. Das bedeutet, dass ein bestimmtes Webelement
+    mehrmals verwendet werden kann, aber nur an einer Stelle
+    definiert ist.
+\end{enumerate}
+
+
+Im nächsten Teil werden die Implementierung der Tests und die verwendeten
+Methoden genauer beschrieben.
+
+
+
