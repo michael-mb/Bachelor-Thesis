@@ -1,0 +1,78 @@
+\subsubsection{Phase 5: Implementierung der tests nach dem szenario}
+
+Diese Phase konzentriert sich auf die Umsetzung des in Phase 2
+beschriebenen Szenarios. Es handelt sich um das Schreiben des Tests
+an sich. In dieser Phase wird der Tester die Aktionen eines Nutzers
+nacheinander ausführen.
+
+Im Fall des Registrierungstests geht es zunächst darum, sich mit einer
+Matrikelnummer zu registrieren, die nicht in der Datenbank verzeichnet
+ist. Dann wird das Registrierungsformular mit den zuvor festgelegten
+Daten ausgefüllt. Im nächsten Schritt werden die Allgemeinen
+Geschäftsbedingungen akzeptiert und der Testuser dann einloggt.
+Um zu überprüfen, ob die Registrierung erfolgreich war, muss der
+Tester einen Login-Test mit den Daten simulieren, die er bei der
+Registrierung verwendet hat (siehe Quellcode \ref{lst:reg-test}). Zwischen all
+diesen Schritten werden Verifikationsprozesse durchgeführt
+(z. B. ob eine Seite korrekt initialisiert wurde).
+
+Es ist wichtig, Logs und ExtentLogger zu verwenden, um jeden Schritt
+der Tests zu dokumentieren. Dadurch kann bei der Erstellung des
+Ausführungsberichts nachvollzogen werden, welche Schritte während
+des Tests durchgeführt wurden. Außerdem können diese Logs zeigen,
+ob die Tests abgeschlossen wurden oder ob während der Ausführung
+ein Fehler aufgetreten ist.
+
+
+\begin{lstlisting}[label={lst:reg-test}, caption={Registration Test Quellcode}]
+
+    // Registration Test Quellcode
+
+    @Test
+    @Description("New User Registration")
+    public void doRegistrationTest(){
+        ExtentReport.createTest("Test User Registration");
+        ExtentLogger.info("⛔⛔ If you dont see \"Test Passed\" at the end, the Test didn't passed !");
+
+        TestUser user = TestUser.REGISTRATION_USER;
+        RegistrationPage registrationPage = startRegistration(user.username, user.password);
+        Assert.assertTrue(registrationPage.isInitialized(),"Registrationpage was not correctly initialized");
+        ExtentLogger.info("Registration Page is correctly initialized !");
+
+        RegistrationForm form = new RegistrationForm(user.username+"@", user.username+"@", "f",
+                "DE", user.username, "30010", "Bachelor Informatik", "1533186");
+        ContractPage contractPage = registrationPage.registerUser(form);
+        Assert.assertTrue(contractPage.isInitialized(), "Contractpage should be initialized !");
+        ExtentLogger.info("Contract Page is initialized");
+
+        MainPage mainPage = contractPage.acceptPrivacyPolicy();
+        ExtentLogger.info("Privacy Policy was accepted");
+
+        ExtentLogger.info("Try logout and login !");
+        LoginPage loginPage = mainPage.selectLogoutLink();
+        Assert.assertTrue(loginPage.isInitialized() , "Expected to land on login page, after log in, but landed on another page");
+        ExtentLogger.info("Logout was successful, got on login page");
+        log.info("Logout was successful, got on login page");
+
+        // New Login with New Identifier
+        mainPage = regularLogin(user.username , user.password);
+        Assert.assertTrue(mainPage.isInitialized() , "Expected to land on main page, after log in, but landed on another page");
+        ExtentLogger.info("Login was successful, got on main page");
+        log.info("Login was successful, got on main page");
+
+        loginPage = mainPage.selectLogoutLink();
+        Assert.assertTrue(loginPage.isInitialized() , "Expected to land on login page, after log in, but landed on another page");
+        ExtentLogger.info("Logout was successful, got on login page");
+        log.info("Logout was successful, got on login page");
+
+        ExtentLogger.info("Registration was successful");
+        log.info("Registration was successful");
+        ExtentLogger.pass("Test passed");
+    }
+\end{lstlisting}
+
+Es gibt noch viele weitere Funktionen und Klassen, die in dieser
+Arbeit nicht beschrieben werden können. Die Details des Schreibens
+und aller Funktionen werden jedoch in der Dokumentation der
+Testinfrastruktur ausführlich erläutert.
+
