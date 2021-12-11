@@ -1,0 +1,36 @@
+\subsubsection{Zusätzliche Funktionalitäten}
+
+Die UI-Testumgebung verfügt über mehrere Ausführungsmodi.
+Sie ermöglicht es, die Tests lokal und remote in einem Docker-Container
+auszuführen. Dies ermöglicht es, den Prozess der Testausführung 
+vollständig zu automatisieren.
+
+
+Die lokale Ausführung wird in der Regel bei der Implementierung
+der Tests verwendet. Sie ermöglicht es, schnell zu testen, ob die
+Tests korrekt funktionieren, ohne dass sie in einem Container
+ausgeführt werden müssen. Dies führt zu einer erheblichen Zeitersparnis
+bei der Implementierung. Der Local Run Mode bietet auch die
+Möglichkeit, Tests im Headless-Modus auszuführen. Headless bedeutet,
+dass die Selenium-Tests mit einem Headless-Browser ausgeführt werden.
+Er funktioniert wie ein typischer Browser, jedoch ohne
+Benutzeroberfläche, was ihn für automatisierte Tests hervorragend geeignet macht.
+Der lokale Run Mode verwendet einen WebDriverManager. Dies ist sehr
+nützlich, da es das Problem der Versionierung von Webdrivern löst.
+Der Tester muss nicht mehr einen Webdriver auf seinen Computer
+herunterladen, sondern kann den WebdriverManager verwenden, um
+auf einen bereits konfigurierten und sofort einsatzbereiten Driver
+zuzugreifen.
+
+Der Remote-Modus ermöglicht die Ausführung von Tests in
+Docker-Containern mithilfe des Selenium-Hubs (dieses Konzept wird
+im Kapitel über die Docker-Infrastruktur behandelt). Dies ist die
+Methode, die für eine vollautomatische Ausführung von UI-Tests
+verwendet wird. Der Remote-Modus ist so konfiguriert, dass er die
+aktuellste Version des RemoteWebDrivers verwendet (in einem
+Docker-Container enthalten und mit dem Selenium-Hub verbunden).
+
+
+
+Die beiden Testmodi ermöglichen die Durchführung von Tests unter
+Verwendung der Browser Chrome und Firefox.
