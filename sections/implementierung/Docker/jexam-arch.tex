@@ -1,0 +1,23 @@
+\subsection{Docker jExam Infrastructur}
+Um eine stabile Testinfrastruktur zu schaffen und eine bessere
+Verwaltung der Container zu ermöglichen, wurde Docker-Compose
+verwendet, um die verschiedenen Testdienste von jExam zu trennen
+und zu gruppieren. So kann der Tester nur die Dienste ausführen,
+die er braucht und die er testen will. Wenn alle Container
+gleichzeitig gestartet würden, könnte dies sehr viele Ressourcen auf
+dem Host-Computer beanspruchen und das gesamte System verlangsamen.
+Da einige Dienste voneinander abhängig sind, wurde ein Docker-Netzwerk
+geschaffen, das die Kommunikation zwischen den ausgeführten Diensten
+ermöglicht. Dies ermöglicht ein geschlossenes lokales Netzwerk, das
+von außen nicht einsehbar ist (siehe \Cref{fig:dock-net}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{images/all.drawio}
+    \caption{jExam Docker Network Darstellung} \label{fig:dock-net}
+\end{figure}
+
+\input{sections/implementierung/Docker/architektur/launcher.tex}
+\input{sections/implementierung/Docker/architektur/ui-service.tex}
+\input{sections/implementierung/Docker/architektur/penetration.tex}
+

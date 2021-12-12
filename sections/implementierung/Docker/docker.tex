@@ -1,1 +1,117 @@
-\section{Einrichtung der Docker-Infrastruktur}
+\subsection{Docker}
+
+Bei der Entwicklung einer Anwendung gibt es einige Probleme, die
+sehr oft während der Entwicklung oder sogar während der Produktion
+auftreten. Diese Probleme werden oft durch die folgenden Aussage
+formuliert:
+
+\begin{enumerate}
+    \item Das Skript funktionierte gestern aber heute nicht mehr.
+    \item Das Skript funktioniert auf diesem Rechner und nicht auf
+    dem Rechner eines Kollegen/Kunden.
+    \item Das Skript funktioniert nur mit Java 5 und nicht mit Java 8.
+    \item Die Anwendung muss in allen aktuellen Browser-Versionen von Chrome (80,81,82,\ldots,89) und Firefox (78,79,80,\ldots,84) getestet werden.
+    Mussen die alle installiert werden ?
+\end{enumerate}
+
+Docker ist eine Open-Source-Containerisierungsplattform. Sie
+ermöglicht Entwicklern, Anwendungen in \Gls{container}
+(standardisierte ausführbare Komponenten) zu verpacken.
+Sie kombinieren den Quellcode der Anwendung mit den
+Betriebssystembibliotheken und Abhängigkeiten, die für die
+Ausführung dieses Codes in jeder Umgebung erforderlich sind.
+Container vereinfachen die Bereitstellung verteilter Anwendungen und
+erfreuen sich zunehmender Beliebtheit (vgl. \cite{docker}).
+
+Docker macht das Erstellen, Bereitstellen und Verwalten von
+Containern leichter, einfacher und sicherer (vgl. \cite{ibm-docker}).
+Docker ist im Wesentlichen ein Toolkit, das es Entwicklern ermöglicht,
+Container mit einfachen Befehlen und arbeitssparender Automatisierung
+über eine einzige API zu erstellen, bereitzustellen, auszuführen,
+zu aktualisieren und zu beenden (vgl. \cite{ibm-docker}). Zu den Vorteilen der Verwendung von
+Docker gehören :
+
+\begin{itemize}
+    \setlength\itemsep{1em}
+    \item[] \textbf{Portabilität}: Ein Container erstellt ein ausführbares
+    Softwarepaket, das vom Host-Betriebssystem abstrahiert
+    (nicht an dieses gebunden oder von diesem abhängig ist)
+    und daher portabel und in der Lage ist, auf jeder Plattform oder
+    Cloud einheitlich und konsistent zu laufen.
+
+    \item[] \textbf{Agilität}: Docker für die Ausführung von Containern hat den
+    Industriestandard für Container mit einfachen Entwicklertools
+    und einem universellen Paketierungsansatz geschaffen, der sowohl
+    unter Linux- als auch unter Windows-Betriebssystemen funktioniert.
+    Das Container-Ökosystem hat sich auf Engines verlagert, die von
+    der Open Container Initiative (OCI) verwaltet werden.
+    Softwareentwickler können weiterhin agile oder DevOps-Tools
+    und -Prozesse für eine schnelle Anwendungsentwicklung und
+    -verbesserung verwenden.
+
+    \item[] \textbf{Geschwindigkeit}: Container werden oft als "leichtgewichtig"
+    bezeichnet, was bedeutet, dass sie den Betriebssystemkern des
+    Rechners gemeinsam nutzen und nicht mit diesem zusätzlichen
+    Overhead belastet werden. Dies steigert nicht nur die Effizienz
+    des Servers, sondern senkt auch die Server- und Lizenzkosten und
+    verkürzt die Startzeiten, da das Betriebssystem nicht gebootet
+    werden muss.
+
+    \item[] \textbf{Isolierung von Fehlern}: Jede containerisierte Anwendung ist
+    isoliert und arbeitet unabhängig von den anderen. Der Ausfall
+    eines Containers hat keine Auswirkungen auf den weiteren Betrieb
+    der anderen Container. Entwicklungsteams können alle technischen
+    Probleme innerhalb eines Containers identifizieren und beheben,
+    ohne dass es zu Ausfallzeiten in anderen Containern kommt.
+    Außerdem kann die Container-Engine alle
+    Sicherheitsisolationstechniken des Betriebssystems nutzen, um Fehler innerhalb der
+    Container zu isolieren.
+
+    \item[] \textbf{Effizienz}: Software, die in containerisierten Umgebungen
+    ausgeführt wird, teilt sich den Betriebssystemkern des Rechners,
+    und Anwendungsschichten innerhalb eines Containers können von
+    mehreren Containern gemeinsam genutzt werden. Daher haben
+    Container von Natur aus eine geringere Kapazität als eine VM
+    und benötigen weniger Anlaufzeit, so dass weitaus mehr Container
+    auf der gleichen Rechenkapazität wie eine einzelne VM ausgeführt
+    werden können. Dies führt zu einer höheren Server-Effizienz und
+    senkt die Server- und Lizenzierungskosten.
+
+    \item[] \textbf{Sicherheit}: Die Isolierung von Anwendungen in Form von
+    Containern verhindert von Natur aus, dass bösartiger Code in
+    andere Container oder das Hostsystem eindringt. Darüber hinaus
+    können Sicherheitsberechtigungen definiert werden, um unerwünschte
+    Komponenten automatisch am Eintritt in Container zu hindern oder
+    die Kommunikation mit unnötigen Ressourcen einzuschränken.
+
+\end{itemize}
+
+
+Docker bietet also die Möglichkeit, ein Werkzeug zu bauen, das auf
+allen Arten von Systemen unabhängig von den lokalen Konfigurationen
+der einzelnen Benutzer funktioniert. Es spielt also keine Rolle,
+welche Java-Version oder welches Betriebssystem ein Benutzer hat (vgl. \cite{ibm-docker}).
+Anstatt eine Vielzahl von Abhängigkeiten herunterzuladen und zu
+installieren, kann man auch einfach einen Container mit allen
+notwendigen Abhängigkeiten erstellen und ihn auf jedem System
+verwenden, das Docker unterstützt. Die Verwendung von Docker wird all diese Vorteile für die Entwicklung
+der Testinfrastruktur nutzen. Das zusätzliche Werkzeug zur
+Orchestrierung der verschiedenen Container ist jedoch Docker-compose.
+
+
+Wenn Sie eine Anwendung aus Prozessen in mehreren Containern erstellen,
+die sich alle auf demselben Host befinden, können Sie Docker-Compose
+verwenden, um die Anwendungsarchitektur zu verwalten. Docker Compose
+erstellt eine YAML-Datei, die die Dienste angibt, die in der Anwendung
+enthalten sein sollen, und kann die Container mit einem einzigen
+Befehl bereitstellen und ausführen. Mithilfe von Docker Compose ist
+es möglich, persistente Volumes für den Speicher zu definieren,
+Basisknoten anzugeben und die Abhängigkeiten der Dienste zu
+dokumentieren und zu konfigurieren.
+
+
+Im nächsten Kapitel wird beschrieben, wie Docker und Docker-Compose
+für die Einrichtung der Testinfrastruktur von jExam verwendet
+wurden.
+
+
