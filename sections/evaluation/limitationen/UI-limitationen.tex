@@ -1,0 +1,32 @@
+\subsection{Probleme beim UI-Testing}
+
+
+Die Entwicklung von UI-Tests erforderte, UI-Tests für \Gls{jexam_new}
+bereitzustellen und gleichzeitig \Gls{jexam_2009} zu testen. Die beiden
+Anwendungen haben eine fast identische grafische Benutzeroberfläche,
+aber es gibt deutliche Unterschiede im HTML-Code (siehe Abbildung).
+Selenium stützt sich beim Auffinden von Elementen hauptsächlich auf
+diesen HTML-Code. Dies könnte für die Entwicklung von Tests
+problematisch werden. Tests, die für \Gls{jexam_2009} funktionieren,
+funktionieren  nicht automatisch  für \Gls{jexam_new}. Sie müssen daher
+angepasst werden.
+
+
+Dieses Problem kann leicht gelöst werden, wenn die Entwickler
+einen "Selenium"-Entwicklungsansatz verwenden. Dieser Ansatz
+besteht darin, dass man entwickelt, während man weiß, dass man
+Selenium-Tests zum Testen schreiben wird. Entwickler, die diesen
+Ansatz verwenden, fügen ihren anklickbaren Elementen (Hyperlinks,
+Buttons, Formularelementen) HTML-Attribute "id, name, value" hinzu,
+die einen einfachen Zugriff auf ein HTML-WebElement ermöglichen.
+Dies erleichtert die Entwicklung von Tests mit Selenium erheblich.
+Die Entwickler sollten sich auch bemühen, die gleiche
+Frontend-Struktur in beiden Anwendungen beizubehalten. Auf diese
+Weise müssen die Tester einen Test nur einmal schreiben und er
+kann auf beiden Plattformen funktionieren.
+
+Unter den Erwartungen an UI-Tests gibt es einen bestimmten Test,
+der mit Selenium nicht durchführbar ist. Es handelt sich dabei um
+den Abruf der Noten als PDF. Selenium ist begrenzt und hat keine
+Möglichkeit, diese Aufgabe zu realisieren.
+

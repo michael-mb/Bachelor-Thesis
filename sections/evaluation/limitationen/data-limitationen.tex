@@ -1,0 +1,27 @@
+\subsection{Probleme bei der Initialisierung von Daten}
+
+Die Initialisierung der Daten auf der Plattform erfolgt mithilfe
+eines Java Skripts, das die Daten in den JBOSS-Server injiziert.
+Dies bringt jedoch einige Probleme mit sich, die den Testzyklus
+verlangsamen. Beim Testen einer Anwendung muss der Tester sehr
+oft zu einer Ausgangssituation zurückkehren, um seine Tests erneut
+auszuführen, was mit dem Initializer nicht möglich ist. Es ist daher
+technisch nicht möglich, denselben Benutzer mehrmals für bestimmte
+Tests zu verwenden, da die Daten nicht mehr neu sind und beschädigt
+wurden. Aus diesem Grund muss der Tester nach jedem Test eine Datei
+testData.csv (\Cref{fig:testData}) erstellen und diese Benutzer
+verwenden. Dies verkompliziert den Testprozess. Die Tatsache, dass
+man nicht zur Ausgangssituation zurückkehren kann (die Daten nicht
+zurücksetzen kann), verhindert, dass man die volle Kontrolle über
+das Schreiben der Tests hat. Das Testen von bestimmten Fällen ist
+noch schwieriger zu reproduzieren. Die fehlende Kontrolle über das
+Erzeugen und Löschen von Daten nimmt dem Tester die Möglichkeit,
+die Anwendung vollständig zu testen.
+
+Es ist wichtig zu beachten, dass der Initializer, der für die
+Testinfrastruktur verwendet wird, noch in der ersten Version
+vorliegt und noch wenig entwickelt ist. Es könnte vermieden werden,
+dass bei jedem Start neue Benutzer generiert werden, wenn es die
+Möglichkeit gäbe, die Testdaten zurückzusetzen.  Eine Lösung könnte
+auch darin bestehen, die beiden Versionen von jExam vom JBoss-Server
+zu trennen und eine lokale Testdatenbank zu erstellen.

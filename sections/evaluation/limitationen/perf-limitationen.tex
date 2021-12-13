@@ -1,0 +1,19 @@
+\subsection{Leistungsprobleme}
+
+Die Testinfrastruktur ist nicht frei von Fehlern. Sie stammen nicht
+direkt aus der Infrastruktur, sondern aus den verschiedenen
+Anwendungen, aus denen sie besteht (\Gls{jexam_2009}, \Gls{jexam_new} und vor
+allem JBOSS). Bei der Durchführung von Tests kann es zu Inkonsistenzen
+und Fehlern auf der Ebene des jBoss-Servers kommen. Manchmal werden
+die Daten nicht korrekt angezeigt. Dies führt dazu, dass der
+JBOSS-Server in einem Docker-Container nicht stabil ist. Um dieses
+Problem zu beheben, wäre die Lösung, jExam für eine Testversion von
+JBOSS zu trennen. Dies würde die Testinfrastruktur weniger komplex
+und stabiler machen.
+
+Das zweite Problem ist, dass die Testinfrastruktur schwerfällig ist
+und sehr viele Ressourcen auf dem Host-Computer beansprucht. Um dieses
+Problem zu lösen, sollte die Infrastruktur durch eine bessere Nutzung
+von Docker-Compose oder sogar durch eine mögliche Integration mit dem
+Kubernetes-Tool optimiert werden.
+
