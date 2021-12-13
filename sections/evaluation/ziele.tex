@@ -1,0 +1,49 @@
+\section{Erreichte Ziele}
+
+In einem ersten Schritt sollten die Funktionen von \Gls{jexam_2009}
+getestet werden. Danach sollte herausgefunden werden, ob es möglich 
+ist, die Tests von \Gls{jexam_2009} zum Testen von \Gls{jexam_new} 
+wiederzuverwenden und sogar eine Testsuite für \Gls{jexam_new} 
+bereitzustellen, bevor die Entwicklung abgeschlossen ist. Dies wurde
+durch die Verwendung des Selenium-Tools ermöglicht, da 
+\Gls{jexam_2009} und \Gls{jexam_new} praktisch die gleiche grafische 
+Benutzeroberfläche haben. Die in \autoref{subsec:jexam-ui-tests}beschriebenen
+Funktionen wurden für \Gls{jexam_2009} getestet und nur die Login-Funktion
+für \Gls{jexam_new} (weil die anderen Funktionen noch nicht entwickelt
+wurden). Der gleiche Login-Test funktioniert also für beide
+Plattformen. Das Ziel für UI-Tests wurde erreicht.
+
+Zweitens wurde die Frage gestellt, inwieweit es möglich ist,
+Sicherheitstests zu integrieren. Diese Frage wurde in
+\autoref{sec:entwicklung-von-sicherheitstests} behandelt und es
+zeigte sich, dass es tatsächlich möglich ist,
+Sicherheitstests zu integrieren. Zu diesem Zweck wurden
+Schwachstellen-Scanner eingebaut, die beide Versionen von jExam
+auf ausnutzbare Sicherheitslücken scannen.
+
+
+Drittens ging es um die Frage, ob Bottleneck-Performance in beiden
+Versionen von jExam festgestellt werden konnte. Dies war ein schwer
+zu lösendes Problem, da sich \Gls{jexam_new} noch in der Entwicklung
+befindet. Das jMeter-Tool wurde jedoch in die Testinfrastruktur
+integriert und mit Skripten versehen, um beide Versionen zu testen.
+Bei der Analyse der von diesen Skripten erstellten Berichte wurden
+kürzere Antwortzeiten für \Gls{jexam_new} festgestellt, was auf eine
+mögliche Verbesserung hindeuten könnte. Die verwendeten jMeter-Skripte
+sind jedoch recht einfach und eignen sich nicht zum genauen Testen
+von Anwendungen. Sie sollten daher verbessert werden.
+
+
+Die Testinfrastruktur wurde so konzipiert, dass sie auf allen
+Systemen tragbar, leicht installierbar, vollautomatisch und für
+die Durchführung von Tests konfigurierbar ist. Daher kann man
+sagen, dass die Testinfrastruktur die in
+\autoref{sec:anforderungen-an-die-jexam-testsuite} beschriebenen
+Anforderungen erfüllt. Es gibt jedoch noch einige Probleme, die
+unabhängig von der Testinfrastruktur an sich sind und die im
+nächsten Teil diskutiert werden.
+
+
+
+
+
