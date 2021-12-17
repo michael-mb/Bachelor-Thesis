@@ -3,16 +3,16 @@
 Die Performancetests, die für beide Versionen von jExam geschrieben wurden,
 basieren im Wesentlichen auf den Kriterien in  \autoref{ch:perform}. Die Tests, die
 in diesem Kapitel durchgeführt wurden, sind nur eine bescheidene Demonstration
-dessen, was mit jMeter möglich ist. Diese Tests könnten im Laufe der Zeit
+dessen, was mit Jmeter möglich ist. Diese Tests könnten im Laufe der Zeit
 weiterentwickelt und verbessert werden, wenn die Kriterien für die Bewertung
 der Plattformen spezifischer werden. Sie werden daher als Grundlage für die
-Entwicklung zukünftiger Tests dienen. JMeter wird in diesem Fall zum Testen
+Entwicklung zukünftiger Tests dienen. Jmeter wird in diesem Fall zum Testen
 einer Webanwendung verwendet. Deshalb wird HTTP als Kommunikationsprotokoll
 verwendet. Zunächst ist es notwendig, einige Begriffe zu erklären, die im
 Folgenden verwendet werden:
 
 \textbf{Thread-Gruppe} : Sie ist eine Gruppe von Threads, die das gleiche
-Szenario ausführen. Sie ist das Basiselement für jeden JMeter-Testplan. Es
+Szenario ausführen. Sie ist das Basiselement für jeden Jmeter-Testplan. Es
 stehen mehrere Thread-Gruppen zur Verfügung, die konfiguriert werden können,
 um zu simulieren, wie die Benutzer mit der Anwendung interagieren, wie die
 Last aufrechterhalten wird und über welchen Zeitraum. Jeder Thread führt
@@ -21,10 +21,10 @@ Test-Threads aus. Mehrere Threads werden verwendet, um gleichzeitige
 Verbindungen zu Ihrer Serveranwendung zu simulieren.
 
 \textbf{Assertions} : Sie sind die Komponente eines Tests, mit der ein
-Benutzer bestätigen kann, dass die von JMeter erhaltene Antwort den
+Benutzer bestätigen kann, dass die von Jmeter erhaltene Antwort den
 erwarteten Kriterien entspricht. Sie stellen sicher, dass der Benutzer sich
 einer inkonsistenten oder unerwarteten Antwort der Zielanwendung bewusst
-ist. Die Assertions von JMeter sind ein mächtiges Werkzeug, aber ihre
+ist. Die Assertions von Jmeter sind ein mächtiges Werkzeug, aber ihre
 Wirksamkeit hängt sowohl von den ausgewählten Assertionskriterien als auch
 von der Genauigkeit der vorherigen Anfrage ab. Die Assertion validiert, dass
 die Antwort der Anwendung wie erwartet empfangen wird, aber diese Antwort
@@ -94,6 +94,6 @@ kann sich diese Berichte ansehen und sie mit den Zielkriterien vergleichen.
 "jmeter -f -n -t jExam_New.jmx -l results.csv
 -e -o reports/html" ]
 
-# jExam_New.jmx : jExam_new Generierter jMeter-Test
+# jExam_New.jmx : jExam_new Generierter Jmeter-Test
 # reports/html : Ordner, der den HTML-Bericht enthalten wird
 \end{lstlisting}
