@@ -1,66 +1,50 @@
 \section{Verwandte Arbeiten}
 
-In der heutigen wettbewerbsorientierten und schnelllebigen
-Welt ist das Internet zu einem integralen Bestandteil des Lebens
-geworden. Heutzutage treffen die meisten von uns ihre Entscheidungen,
-indem sie im Internet nach Informationen suchen. Das Hosten einer
-Website ist daher nicht mehr optional, sondern für alle Arten von
-Unternehmen obligatorisch. Es ist der erste Schritt, um auf dem
-Markt relevant zu werden und zu bleiben. Es reicht nicht mehr aus,
-nur eine Website zu haben. Ein Unternehmen muss eine Website
-entwickeln, die informativ, zugänglich und benutzerfreundlich ist.
-Um all diese Qualitäten zu erhalten, sollte die Website getestet
-werden, und dieser Prozess des Testens einer Website ist als Web-Testing
-bekannt (siehe \autoref{ch:grundlagen}). Um diese Aufgabe zu bewältigen,
-durchlaufen die Testerteams mehrere Schritte:
+In der Literatur gibt es mehrere Artikel, die Ansätze
+zur Automatisierung des Testens von Webanwendungen
+vorstellen (vgl. \cite{6140672} und \cite{6211171}).
+Die meisten dieser Ansätze folgen den Schritten zum
+Schreiben von UI-Tests, die in \autoref{sec:verschiedene-schritte-zur-erstellung-einer-testsuite}
+beschrieben  wurde. Für die Erstellung eines Test Automation
+Framework mit Selenium wählten Fei Wang et al.
+(vgl. \cite{6211171}) zunächst die verschiedenen
+Webbrowser aus, die sie für die Entwicklung der
+Tests verwenden wollten. Anschließend erstellten
+sie eine Testumgebung. Diese Umgebung sollte mit
+generierten Testdaten erstellt werden. Dann folgt
+die Phase des Designs von Testfällen, die sie in
+ein Set von Aktionen übersetzen werden. Diese Aktionen
+werden dann in verschiedene Befehle/Skripte übersetzt,
+je nach dem, welches Tool zum Testen verwendet wird
+(in diesem Fall Selenium). Danach werden die Aktionen
+von dem verwendeten Testwerkzeug ausgeführt und
+ein Testbericht erstellt.
 
 
-\textbf{Erstellung eines Testplan:} Ein Testplan ist ein Dokument, das den
-Umfang, die Vorgehensweise und den Zeitplan der geplanten Testaktivitäten
-festlegt (vgl. \cite{shultz2011software}, S. 79). Das Hauptziel eines Testplans
-ist die Erstellung einer Dokumentation, die beschreibt, wie der Tester
-überprüft, ob das System wie vorgesehen funktioniert. Das Dokument sollte
-beschreiben, was getestet werden muss, wie es getestet werden soll und wer
-dafür verantwortlich ist. Er ist die Grundlage für jede Testarbeit
-(vgl. \cite{shultz2011software}, S. 79). Der Testplan enthält in der Regel die
-folgenden Informationen:
+Die letzte Phase besteht aus dem Testen des
+Test-Frameworks und seiner Infrastruktur. Die
+Leistung in Bezug auf Wiederverwendbarkeit,
+Erweiterbarkeit und Kompatibilität muss bewertet werden.
+Um diese Tests durchzuführen, empfehlen Fei Wang
+et al. die Verwendung unterschiedlicher Testdaten bei
+der Vorbereitung der Testfelder und die Beobachtung der
+erzielten Ergebnisse. Die Ergebnisse der Evaluierung
+des webbasierten Testautomatisierungs-Frameworks haben
+gezeigt, dass das Framework den Testern ein Werkzeug
+gibt, mit dem sie bequem verschiedene Browser für den
+Test von Webanwendungen konfigurieren, eine große
+Menge an Daten für den Leistungstest vorbereiten
+können, indem sie die Datenressourcen direkt
+konfigurieren, einen Testtyp einfach konfigurieren,
+indem sie einen Testtyp modifizieren, und zwischen
+verschiedenen Tests umschalten können, ohne
+irgendwelche Elemente im Zusammenhang mit den
+Testfällen zu verändern (vgl. \cite{6211171}).
 
-\begin{enumerate}
-    \item Das Gesamtziel des Testaufwands.
-    \item Einen detaillierten Überblick über die Art und Weise, wie die Tests
-    durchgeführt werden.
-    \item Die zu prüfenden Funktionen, Anwendungen oder Komponenten.
-    \item Detaillierte Zeit- und Ressourcenzuweisungspläne für Tester und
-    Entwickler während aller Testphasen.
-\end{enumerate}
-
-\textbf{Erstellung einer Teststrategie :} Die Teststrategie beim Softwaretesten
-ist definiert als eine Reihe von Leitprinzipien, die das Testdesign
-bestimmen und regeln, wie der Softwaretestprozess durchgeführt wird. Das Ziel
-der Teststrategie ist es, einen systematischen Ansatz für den
-Softwaretestprozess zu liefern, um die Qualität, Rückverfolgbarkeit,
-Zuverlässigkeit und bessere Planung zu gewährleisten. Die
-Teststrategie wird sehr oft mit dem Testplan verwechselt. Es gibt jedoch einen
-bemerkenswerten Unterschied zwischen den beiden. Der Testplan konzentriert
-sich auf die Organisation und das Management der Ressourcen sowie die
-Definition der Ziele, während die Teststrategie sich auf die Umsetzung und die
-Testtechniken konzentriert. Beide helfen bei der Planung, aber auf
-unterschiedlicher Ebene.
-
-\textbf{Testentwurf und implementierung :} Der Testentwurf ist ein Prozess,
-der beschreibt, "wie" die Tests durchgeführt werden sollen und das
-Schreiben von Testsuiten für das Testen einer Software. Er umfasst Prozesse
-zur Identifizierung von Testfällen durch Aufzählung von Schritten der
-definierten Testbedingungen. Die in der Teststrategie oder dem Testplan
-definierten Testtechniken werden für die Aufzählung
-der Schritte verwendet (vgl. \cite{shultz2011software}, S. 46).
-
-
-
-Je nach den Zielen, die im Testplan festgelegt wurden, konzentrieren sich die
-Entwickler auf bestimmte Arten von Tests, z. B. Funktionale Tests,
-Performancetests oder Sicherheitstests. Für diese Arbeit wurde vorab ein
-Testplan erstellt. Aus diesem Grund wird der Schwerpunkt auf der Implementierung
-von Tests und der Einrichtung der Testinfrastruktur liegen.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{images/web-based}
+    \caption{Funktionsweise eines WebAutomationTesting-Frameworks (vgl. \cite{6211171})} \label{fig:web-based}
+\end{figure}
 
 
