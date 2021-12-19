@@ -1,0 +1,4 @@
+Run Thesis script
+biber --input-directory=D:/uni/bachelor/software_testing/Bachelorarbeit thesis
+makeindex -s thesis.ist -o thesis.gls thesis.glo
+Run Thesis script
