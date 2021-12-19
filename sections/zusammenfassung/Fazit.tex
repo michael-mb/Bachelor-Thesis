@@ -1,0 +1,27 @@
+\section{Fazit}
+
+Die Testinfrastruktur in ihrem derzeitigen Zustand dient lediglich als
+Basis für die Entwicklung von jExam-Tests. Die Sicherheits- und
+Performancetests, die integriert wurden, sind ziemlich minimalistisch
+und sollten weiter verbessert werden. Dasselbe gilt für die UI-Tests,
+die derzeit nur einige Funktionen der Plattform testen. Für eine bessere
+Abdeckung ist es jedoch wichtig, mehr Tests zu schreiben und alle Funktionen
+abzudecken. Eine so sensible Plattform wie jExam sollte in allen Details
+getestet werden.
+
+Es gibt jedoch noch einige Probleme, die unabhängig von der Testinfrastruktur
+an sich sind und die  gelöst werden sollten, um die Testinfrastruktur erheblich
+zu verbessern. Ein Beispiel hierfür ist die Abhängigkeit der Testinfrastruktur
+vom JBoss-Server, die häufig zu Dateninkonsistenzproblemen führt, da dieser
+Server Verbindungen zu entfernten Datenbanken herstellt. Dieses Problem und
+mögliche Lösungen wurden in \autoref{ch:evaluation} behandelt.
+
+Die jExam-Testinfrastruktur ist relativ jung und könnte noch erheblich verbessert
+werden. Nicht nur die bestehenden Tests können weiter verbessert werden, sondern
+es besteht auch die Möglichkeit, neue Testarten zu integrieren. Dazu gehören
+Stresstests, Volumetests, Usabilitytests und andere Arten von funktionalen
+Tests, die sich von UI-Tests unterscheiden. Die Möglichkeiten sind sehr breit
+gefächert und Docker könnte an einem bestimmten Punkt auch eingeschränkt werden.
+Dies würde eine Tür für den Einsatz von Tools wie Kubernetes öffnen, das ein
+Open-Source-System zur Automatisierung der Bereitstellung, Skalierung und
+Verwaltung von containerisierten Anwendungen ist (vgl. \cite{kubernetes}).

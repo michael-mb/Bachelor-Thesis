@@ -1,30 +1,5 @@
-\chapter{Zusammenfassung und Ausblick}\label{ch:conclusion}
+\chapter{Fazit und Ausblick}\label{ch:conclusion}
 
+\input{sections/zusammenfassung/zusammenfassung.tex}
+\input{sections/zusammenfassung/Fazit.tex}
 
-\input{sections/figures}
-\input{sections/install}
-
-\section{Was ist ABC?}
-
-\blindtext
-
-\blindtext
-
-\todo[inline]{Write some more}
-
-\begin{lstlisting}[language=AST,label={lst:example-ast},caption={Example AST}]
-RailwayContainer ::= Route* Region*;
-abstract RailwayElement ::= <Id:int>;
-Region : RailwayElement ::= TrackElement* Sensor*;
-Semaphore : RailwayElement ::= <Signal:Signal>;
-Route : RailwayElement ::= <Active:boolean> SwitchPosition*;
-SwitchPosition : RailwayElement ::= <Position:Position>;
-Sensor : RailwayElement;
-abstract TrackElement:RailwayElement;
-Segment : TrackElement ::= <Length:int> Semaphore*;
-Switch : TrackElement ::= <CurrentPosition:Position>;
-\end{lstlisting}
-%
-Das Listing~\ref{lst:example-ast} zeigt eine beispielhafte Grammatik, welche im Attribute im folgenden Listing genutzt wird:
-
-\lstinputlisting[language=JRAG,style=unboxed]{code/requiredSensor.jrag}
