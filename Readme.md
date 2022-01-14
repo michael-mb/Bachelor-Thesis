@@ -4,7 +4,7 @@
 |:------ |:----------- |
 | Language   | German |
 | Theme | Entwicklung einer Web-Testsuite am Beispiel von jExam |
-| Grade    | Bachelor of Science (BSc ) in Computer Science |
+| Grade    | Bachelor of Science (BSc) in Computer Science |
 
 Click [Thesis](Bachelorthesis.pdf) to read the Thesis. 
 
