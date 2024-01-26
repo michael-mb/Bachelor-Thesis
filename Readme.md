@@ -8,7 +8,7 @@
 
 Click [Thesis](Bachelorthesis.pdf) to read the Thesis. 
 
-## Resume : 
+## Abstract : 
 
 This work focuses on the development of a Test infrastructure. This infrastructure should be able to execute security, performance and functional UI tests in a fully automatic way. This infrastructure has been developed for the jExam platform of the TU Dresden but it could also be used for different and much larger projects.  
 
